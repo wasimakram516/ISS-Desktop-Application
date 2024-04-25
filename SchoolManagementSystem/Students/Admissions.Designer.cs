@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class Admissions
     {
@@ -622,7 +622,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ISS.Properties.Resources.Student_2;
+            this.pictureBox1.Image = global::SchoolManagementSystem.Properties.Resources.Student_2;
             this.pictureBox1.Location = new System.Drawing.Point(323, 59);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(163, 166);

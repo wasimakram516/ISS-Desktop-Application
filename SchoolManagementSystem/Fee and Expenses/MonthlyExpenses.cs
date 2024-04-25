@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class MonthlyExpenses : Sample2
     {
@@ -28,7 +28,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbExpenditures obj = new ISS.dbExpenditures();
+            dbExpenditures obj = new SchoolManagementSystem.dbExpenditures();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 
@@ -159,7 +159,7 @@ namespace ISS
 
         public override void btnView_Click(object sender, EventArgs e)
         {
-            MonthlyExpensesView obj = new ISS.MonthlyExpensesView();
+            MonthlyExpensesView obj = new SchoolManagementSystem.MonthlyExpensesView();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 

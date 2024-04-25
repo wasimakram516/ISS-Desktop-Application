@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class dbPrincipal : Sample
     {
@@ -41,7 +41,7 @@ namespace ISS
 
         private void btnStaffManagement_Click(object sender, EventArgs e)
         {
-            dbStaffManagement STM = new ISS.dbStaffManagement();
+            dbStaffManagement STM = new SchoolManagementSystem.dbStaffManagement();
             MainClass.ShowWindow(STM, this, MDI.ActiveForm);
         }
 
@@ -62,7 +62,7 @@ namespace ISS
             DialogResult dr = MessageBox.Show("Are you sure, You want to logout?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                Login log = new ISS.Login();
+                Login log = new SchoolManagementSystem.Login();
                 MainClass.ShowWindow(log, this, MDI.ActiveForm);
             }
         }

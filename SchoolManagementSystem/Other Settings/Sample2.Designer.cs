@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class Sample2
     {
@@ -106,7 +106,7 @@
             this.btnView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnView.FlatAppearance.BorderSize = 2;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Image = global::ISS.Properties.Resources.icons8_refresh_48;
+            this.btnView.Image = global::SchoolManagementSystem.Properties.Resources.icons8_refresh_48;
             this.btnView.Location = new System.Drawing.Point(563, 3);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(134, 61);
@@ -122,7 +122,7 @@
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDelete.FlatAppearance.BorderSize = 2;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::ISS.Properties.Resources.icons8_delete_shield_48;
+            this.btnDelete.Image = global::SchoolManagementSystem.Properties.Resources.icons8_delete_shield_48;
             this.btnDelete.Location = new System.Drawing.Point(423, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(134, 61);
@@ -138,7 +138,7 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.FlatAppearance.BorderSize = 2;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Image = global::ISS.Properties.Resources.icons8_tick_box_48;
+            this.btnSave.Image = global::SchoolManagementSystem.Properties.Resources.icons8_tick_box_48;
             this.btnSave.Location = new System.Drawing.Point(283, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(134, 61);
@@ -154,7 +154,7 @@
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.FlatAppearance.BorderSize = 2;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Image = global::ISS.Properties.Resources.icons8_pencil_drawing_48;
+            this.btnEdit.Image = global::SchoolManagementSystem.Properties.Resources.icons8_pencil_drawing_48;
             this.btnEdit.Location = new System.Drawing.Point(143, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(134, 61);
@@ -170,7 +170,7 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.FlatAppearance.BorderSize = 2;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = global::ISS.Properties.Resources.icons8_add_48;
+            this.btnAdd.Image = global::SchoolManagementSystem.Properties.Resources.icons8_add_48;
             this.btnAdd.Location = new System.Drawing.Point(3, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(134, 61);
@@ -215,7 +215,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);

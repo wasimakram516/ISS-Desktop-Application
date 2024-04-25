@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class dbNotifications : Sample
     {
@@ -21,12 +21,12 @@ namespace ISS
         {
             if (MainClass.STAFFROLE == "Admin")
             {
-                dbAdmin hom = new ISS.dbAdmin();
+                dbAdmin hom = new SchoolManagementSystem.dbAdmin();
                 MainClass.ShowWindow(hom, this, MDI.ActiveForm);
             }
             else if (MainClass.STAFFROLE == "Principal")
             {
-                dbPrincipal ad = new ISS.dbPrincipal();
+                dbPrincipal ad = new SchoolManagementSystem.dbPrincipal();
                 MainClass.ShowWindow(ad, this, MDI.ActiveForm);
             }
             else
@@ -39,13 +39,13 @@ namespace ISS
 
         private void btnAbsentMessages_Click(object sender, EventArgs e)
         {
-            AbsentNotifications ad = new ISS.AbsentNotifications();
+            AbsentNotifications ad = new SchoolManagementSystem.AbsentNotifications();
             MainClass.ShowWindow(ad, this, MDI.ActiveForm);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-          SMS.ManualNotifications obj= new ISS.SMS.ManualNotifications();
+          SMS.ManualNotifications obj= new SchoolManagementSystem.SMS.ManualNotifications();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
     }

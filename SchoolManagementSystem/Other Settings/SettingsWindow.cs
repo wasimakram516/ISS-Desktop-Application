@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class SettingsWindow : Sample
     {
@@ -93,12 +93,12 @@ namespace ISS
         {
             if (MainClass.STAFFROLE == "Admin")
             {
-                dbAdmin hom = new ISS.dbAdmin();
+                dbAdmin hom = new SchoolManagementSystem.dbAdmin();
                 MainClass.ShowWindow(hom, this, MDI.ActiveForm);
             }
             else if (MainClass.STAFFROLE == "Principal")
             {
-                dbPrincipal pri = new ISS.dbPrincipal();
+                dbPrincipal pri = new SchoolManagementSystem.dbPrincipal();
                 MainClass.ShowWindow(pri, this, MDI.ActiveForm);
             }
             else if (MainClass.STAFFROLE == "Faculty")

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ISS.Properties {
+namespace SchoolManagementSystem.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ISS.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ISS.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SchoolManagementSystem.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -216,16 +216,6 @@ namespace ISS.Properties {
         internal static System.Drawing.Bitmap icons8_admin_settings_male_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-admin-settings-male-96", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_admin_settings_male_961 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-admin-settings-male-961", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,16 +533,6 @@ namespace ISS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_student_male_961 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-student-male-961", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_students_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-students-96", resourceCulture);
@@ -633,16 +613,6 @@ namespace ISS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ISS {
-            get {
-                object obj = ResourceManager.GetObject("ISS", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Messages {
             get {
                 object obj = ResourceManager.GetObject("Messages", resourceCulture);
@@ -656,16 +626,6 @@ namespace ISS.Properties {
         internal static System.Drawing.Bitmap New_Admissions {
             get {
                 object obj = ResourceManager.GetObject("New Admissions", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap School_building {
-            get {
-                object obj = ResourceManager.GetObject("School building", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -706,6 +666,16 @@ namespace ISS.Properties {
         internal static System.Drawing.Bitmap School41 {
             get {
                 object obj = ResourceManager.GetObject("School41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SchoolManagementSystem {
+            get {
+                object obj = ResourceManager.GetObject("SchoolManagementSystem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -816,16 +786,6 @@ namespace ISS.Properties {
         internal static System.Drawing.Bitmap Students {
             get {
                 object obj = ResourceManager.GetObject("Students", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ULM {
-            get {
-                object obj = ResourceManager.GetObject("ULM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class MonthlyExpensesView : Sample2
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class dbFeeManagement : Sample
     {
@@ -19,19 +19,19 @@ namespace ISS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            dbPrincipal ad = new ISS.dbPrincipal();
+            dbPrincipal ad = new SchoolManagementSystem.dbPrincipal();
             MainClass.ShowWindow(ad, this, MDI.ActiveForm);
         }
 
         private void btnPaymentMethods_Click(object sender, EventArgs e)
         {
-            PaymentMethod pm = new ISS.PaymentMethod();
+            PaymentMethod pm = new SchoolManagementSystem.PaymentMethod();
             MainClass.ShowWindow(pm, this, MDI.ActiveForm);
         }
 
         private void btnFeeStructure_Click(object sender, EventArgs e)
         {
-            FeeStructure fs = new ISS.FeeStructure();
+            FeeStructure fs = new SchoolManagementSystem.FeeStructure();
             MainClass.ShowWindow(fs, this, MDI.ActiveForm);
         }
 
@@ -49,7 +49,7 @@ namespace ISS
 
         private void btnFeePayments_Click(object sender, EventArgs e)
         {
-            FeePayments obj = new ISS.FeePayments();
+            FeePayments obj = new SchoolManagementSystem.FeePayments();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
     }

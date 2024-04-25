@@ -1,5 +1,5 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
-using ISS.Properties;
+using SchoolManagementSystem.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class Admissions : Sample2
     {
@@ -38,7 +38,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbStudemtManagement stm = new ISS.dbStudemtManagement();
+            dbStudemtManagement stm = new SchoolManagementSystem.dbStudemtManagement();
             MainClass.ShowWindow(stm, this, MDI.ActiveForm);
         }
 

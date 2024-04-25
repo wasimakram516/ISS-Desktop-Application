@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class Staff : Sample2
     {
@@ -30,7 +30,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbStaffManagement stm = new ISS.dbStaffManagement();
+            dbStaffManagement stm = new SchoolManagementSystem.dbStaffManagement();
             MainClass.ShowWindow(stm, this, MDI.ActiveForm);
         }
 

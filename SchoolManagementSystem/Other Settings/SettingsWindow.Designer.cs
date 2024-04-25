@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class SettingsWindow
     {
@@ -52,7 +52,7 @@
             // 
             // LeftPanel
             // 
-            this.LeftPanel.Size = new System.Drawing.Size(260, 749);
+            this.LeftPanel.Size = new System.Drawing.Size(260, 834);
             // 
             // pnlDetails
             // 
@@ -70,7 +70,7 @@
             this.pnlDetails.Controls.Add(this.errUsername);
             this.pnlDetails.Controls.Add(this.errDatabase);
             this.pnlDetails.Controls.Add(this.errDataSource);
-            this.pnlDetails.Size = new System.Drawing.Size(260, 699);
+            this.pnlDetails.Size = new System.Drawing.Size(260, 784);
             // 
             // panel3
             // 
@@ -80,11 +80,11 @@
             // 
             // RightPanel
             // 
-            this.RightPanel.Size = new System.Drawing.Size(844, 749);
+            this.RightPanel.Size = new System.Drawing.Size(844, 834);
             // 
             // panel6
             // 
-            this.panel6.Size = new System.Drawing.Size(844, 699);
+            this.panel6.Size = new System.Drawing.Size(844, 784);
             // 
             // lblTopUser
             // 
@@ -230,7 +230,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);
@@ -242,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 749);
+            this.ClientSize = new System.Drawing.Size(1104, 834);
             this.Name = "SettingsWindow";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.SettingsWindow_Load);

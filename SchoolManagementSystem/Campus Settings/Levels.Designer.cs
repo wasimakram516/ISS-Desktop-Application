@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class Levels
     {

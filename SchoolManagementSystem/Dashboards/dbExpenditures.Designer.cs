@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbExpenditures
     {
@@ -124,7 +124,7 @@
             this.btnMonthlyExpenses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthlyExpenses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonthlyExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMonthlyExpenses.Image = global::ISS.Properties.Resources.icons8_general_ledger_96;
+            this.btnMonthlyExpenses.Image = global::SchoolManagementSystem.Properties.Resources.icons8_general_ledger_96;
             this.btnMonthlyExpenses.Location = new System.Drawing.Point(4, 4);
             this.btnMonthlyExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMonthlyExpenses.Name = "btnMonthlyExpenses";
@@ -141,7 +141,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";

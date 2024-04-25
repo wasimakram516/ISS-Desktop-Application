@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbFaculty
     {
@@ -122,7 +122,7 @@
             this.btnStudentLists.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStudentLists.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStudentLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudentLists.Image = global::ISS.Properties.Resources.icons8_student_male_96;
+            this.btnStudentLists.Image = global::SchoolManagementSystem.Properties.Resources.icons8_student_male_96;
             this.btnStudentLists.Location = new System.Drawing.Point(4, 4);
             this.btnStudentLists.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStudentLists.Name = "btnStudentLists";
@@ -138,7 +138,7 @@
             this.btnAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttendance.Image = global::ISS.Properties.Resources.icons8_edit_property_961;
+            this.btnAttendance.Image = global::SchoolManagementSystem.Properties.Resources.icons8_edit_property_961;
             this.btnAttendance.Location = new System.Drawing.Point(275, 4);
             this.btnAttendance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAttendance.Name = "btnAttendance";
@@ -154,7 +154,7 @@
             this.btnTimeTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimeTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnTimeTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimeTable.Image = global::ISS.Properties.Resources.icons8_curriculum_961;
+            this.btnTimeTable.Image = global::SchoolManagementSystem.Properties.Resources.icons8_curriculum_961;
             this.btnTimeTable.Location = new System.Drawing.Point(546, 4);
             this.btnTimeTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTimeTable.Name = "btnTimeTable";
@@ -170,7 +170,7 @@
             this.btnDateSheets.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDateSheets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDateSheets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDateSheets.Image = global::ISS.Properties.Resources.icons8_timesheet_96;
+            this.btnDateSheets.Image = global::SchoolManagementSystem.Properties.Resources.icons8_timesheet_96;
             this.btnDateSheets.Location = new System.Drawing.Point(817, 4);
             this.btnDateSheets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDateSheets.Name = "btnDateSheets";
@@ -186,7 +186,7 @@
             this.btnResultCards.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResultCards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnResultCards.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResultCards.Image = global::ISS.Properties.Resources.icons8_exam_961;
+            this.btnResultCards.Image = global::SchoolManagementSystem.Properties.Resources.icons8_exam_961;
             this.btnResultCards.Location = new System.Drawing.Point(4, 250);
             this.btnResultCards.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnResultCards.Name = "btnResultCards";
@@ -202,7 +202,7 @@
             this.btnExperienceLetters.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExperienceLetters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExperienceLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExperienceLetters.Image = global::ISS.Properties.Resources.icons8_contract_96;
+            this.btnExperienceLetters.Image = global::SchoolManagementSystem.Properties.Resources.icons8_contract_96;
             this.btnExperienceLetters.Location = new System.Drawing.Point(275, 250);
             this.btnExperienceLetters.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExperienceLetters.Name = "btnExperienceLetters";

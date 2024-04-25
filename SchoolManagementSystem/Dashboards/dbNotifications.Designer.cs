@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbNotifications
     {
@@ -109,7 +109,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);
@@ -122,7 +122,7 @@
             this.btnAbsentMessages.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbsentMessages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAbsentMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbsentMessages.Image = global::ISS.Properties.Resources.icons8_attendance_96;
+            this.btnAbsentMessages.Image = global::SchoolManagementSystem.Properties.Resources.icons8_attendance_96;
             this.btnAbsentMessages.Location = new System.Drawing.Point(3, 3);
             this.btnAbsentMessages.Name = "btnAbsentMessages";
             this.btnAbsentMessages.Size = new System.Drawing.Size(205, 190);
@@ -137,7 +137,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::ISS.Properties.Resources.SMS_large_2;
+            this.button1.Image = global::SchoolManagementSystem.Properties.Resources.SMS_large_2;
             this.button1.Location = new System.Drawing.Point(214, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 190);

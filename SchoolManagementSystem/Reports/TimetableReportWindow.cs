@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Data.SqlClient;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class TimetableReportWindow : Sample
     {
@@ -48,7 +48,7 @@ namespace ISS
             }
             else
             {
-                dbReports stm = new ISS.dbReports();
+                dbReports stm = new SchoolManagementSystem.dbReports();
                 MainClass.ShowWindow(stm, this, MDI.ActiveForm);
             }
         }

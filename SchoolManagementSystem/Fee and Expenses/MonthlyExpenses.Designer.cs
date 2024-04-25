@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class MonthlyExpenses
     {
@@ -70,18 +70,18 @@
             // 
             // panel1
             // 
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Size = new System.Drawing.Size(846, 67);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Size = new System.Drawing.Size(952, 67);
             // 
             // txtSearch
             // 
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSearch.Size = new System.Drawing.Size(134, 25);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Size = new System.Drawing.Size(150, 25);
             // 
             // LeftPanel
             // 
             this.LeftPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.LeftPanel.Size = new System.Drawing.Size(258, 651);
+            this.LeftPanel.Size = new System.Drawing.Size(258, 740);
             // 
             // pnlDetails
             // 
@@ -104,7 +104,7 @@
             this.pnlDetails.Controls.Add(this.errExpenseType);
             this.pnlDetails.Location = new System.Drawing.Point(0, 37);
             this.pnlDetails.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pnlDetails.Size = new System.Drawing.Size(258, 614);
+            this.pnlDetails.Size = new System.Drawing.Size(258, 703);
             this.pnlDetails.Controls.SetChildIndex(this.errExpenseType, 0);
             this.pnlDetails.Controls.SetChildIndex(this.label6, 0);
             this.pnlDetails.Controls.SetChildIndex(this.ddExpenseType, 0);
@@ -132,21 +132,21 @@
             // 
             this.RightPanel.Location = new System.Drawing.Point(258, 0);
             this.RightPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.RightPanel.Size = new System.Drawing.Size(846, 651);
+            this.RightPanel.Size = new System.Drawing.Size(952, 740);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.groupBox2);
             this.panel6.Location = new System.Drawing.Point(0, 37);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel6.Size = new System.Drawing.Size(846, 614);
+            this.panel6.Size = new System.Drawing.Size(952, 703);
             this.panel6.Controls.SetChildIndex(this.panel1, 0);
             this.panel6.Controls.SetChildIndex(this.groupBox2, 0);
             // 
             // panel4
             // 
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel4.Size = new System.Drawing.Size(846, 37);
+            this.panel4.Size = new System.Drawing.Size(952, 37);
             // 
             // label4
             // 
@@ -295,7 +295,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 67);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(846, 547);
+            this.groupBox2.Size = new System.Drawing.Size(952, 636);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Details";
@@ -341,7 +341,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(840, 523);
+            this.dataGridView1.Size = new System.Drawing.Size(946, 612);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -452,7 +452,7 @@
             this.AcceptButton = this.btnAddToList;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 651);
+            this.ClientSize = new System.Drawing.Size(1210, 740);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MonthlyExpenses";
             this.Text = "Monthly Expenses";

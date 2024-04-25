@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbFeeManagement
     {
@@ -106,7 +106,7 @@
             this.btnPaymentMethods.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPaymentMethods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPaymentMethods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaymentMethods.Image = global::ISS.Properties.Resources.icons8_e_learning_96;
+            this.btnPaymentMethods.Image = global::SchoolManagementSystem.Properties.Resources.icons8_e_learning_96;
             this.btnPaymentMethods.Location = new System.Drawing.Point(3, 3);
             this.btnPaymentMethods.Name = "btnPaymentMethods";
             this.btnPaymentMethods.Size = new System.Drawing.Size(205, 190);
@@ -121,7 +121,7 @@
             this.btnFeeStructure.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFeeStructure.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeeStructure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeeStructure.Image = global::ISS.Properties.Resources.icons8_bank_card_missing_96;
+            this.btnFeeStructure.Image = global::SchoolManagementSystem.Properties.Resources.icons8_bank_card_missing_96;
             this.btnFeeStructure.Location = new System.Drawing.Point(214, 3);
             this.btnFeeStructure.Name = "btnFeeStructure";
             this.btnFeeStructure.Size = new System.Drawing.Size(205, 190);
@@ -136,7 +136,7 @@
             this.btnFeeConcession.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFeeConcession.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeeConcession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeeConcession.Image = global::ISS.Properties.Resources.icons8_tax_96;
+            this.btnFeeConcession.Image = global::SchoolManagementSystem.Properties.Resources.icons8_tax_96;
             this.btnFeeConcession.Location = new System.Drawing.Point(425, 3);
             this.btnFeeConcession.Name = "btnFeeConcession";
             this.btnFeeConcession.Size = new System.Drawing.Size(205, 190);
@@ -151,7 +151,7 @@
             this.btnFeeVouchers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFeeVouchers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeeVouchers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeeVouchers.Image = global::ISS.Properties.Resources.icons8_transaction_list_96;
+            this.btnFeeVouchers.Image = global::SchoolManagementSystem.Properties.Resources.icons8_transaction_list_96;
             this.btnFeeVouchers.Location = new System.Drawing.Point(636, 3);
             this.btnFeeVouchers.Name = "btnFeeVouchers";
             this.btnFeeVouchers.Size = new System.Drawing.Size(205, 190);
@@ -166,7 +166,7 @@
             this.btnFeePayments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFeePayments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeePayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeePayments.Image = global::ISS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnFeePayments.Image = global::SchoolManagementSystem.Properties.Resources.icons8_cash_in_hand_96;
             this.btnFeePayments.Location = new System.Drawing.Point(3, 199);
             this.btnFeePayments.Name = "btnFeePayments";
             this.btnFeePayments.Size = new System.Drawing.Size(205, 190);
@@ -182,7 +182,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);

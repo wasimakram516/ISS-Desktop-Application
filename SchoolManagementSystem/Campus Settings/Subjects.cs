@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class Subjects : Sample2
     {
@@ -28,7 +28,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbCampusManagement obj = new ISS.dbCampusManagement();
+            dbCampusManagement obj = new SchoolManagementSystem.dbCampusManagement();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 

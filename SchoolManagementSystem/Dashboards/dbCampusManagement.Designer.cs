@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbCampusManagement
     {
@@ -109,7 +109,7 @@
             this.btnCampuses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCampuses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCampuses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCampuses.Image = global::ISS.Properties.Resources.icons8_school_building_96;
+            this.btnCampuses.Image = global::SchoolManagementSystem.Properties.Resources.icons8_school_building_96;
             this.btnCampuses.Location = new System.Drawing.Point(3, 3);
             this.btnCampuses.Name = "btnCampuses";
             this.btnCampuses.Size = new System.Drawing.Size(205, 190);
@@ -124,7 +124,7 @@
             this.btnShifts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShifts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnShifts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShifts.Image = global::ISS.Properties.Resources.icons8_tenses_96;
+            this.btnShifts.Image = global::SchoolManagementSystem.Properties.Resources.icons8_tenses_96;
             this.btnShifts.Location = new System.Drawing.Point(214, 3);
             this.btnShifts.Name = "btnShifts";
             this.btnShifts.Size = new System.Drawing.Size(205, 190);
@@ -139,7 +139,7 @@
             this.btnLevels.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLevels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLevels.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLevels.Image = global::ISS.Properties.Resources.icons8_stairs_96;
+            this.btnLevels.Image = global::SchoolManagementSystem.Properties.Resources.icons8_stairs_96;
             this.btnLevels.Location = new System.Drawing.Point(425, 3);
             this.btnLevels.Name = "btnLevels";
             this.btnLevels.Size = new System.Drawing.Size(205, 190);
@@ -154,7 +154,7 @@
             this.btnClasses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClasses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClasses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClasses.Image = global::ISS.Properties.Resources.icons8_classroom_96;
+            this.btnClasses.Image = global::SchoolManagementSystem.Properties.Resources.icons8_classroom_96;
             this.btnClasses.Location = new System.Drawing.Point(636, 3);
             this.btnClasses.Name = "btnClasses";
             this.btnClasses.Size = new System.Drawing.Size(205, 190);
@@ -169,7 +169,7 @@
             this.btnSections.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSections.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSections.Image = global::ISS.Properties.Resources.icons8_abc_96;
+            this.btnSections.Image = global::SchoolManagementSystem.Properties.Resources.icons8_abc_96;
             this.btnSections.Location = new System.Drawing.Point(3, 199);
             this.btnSections.Name = "btnSections";
             this.btnSections.Size = new System.Drawing.Size(205, 190);
@@ -184,7 +184,7 @@
             this.btnSubject.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubject.Image = global::ISS.Properties.Resources.icons8_school_961;
+            this.btnSubject.Image = global::SchoolManagementSystem.Properties.Resources.icons8_school_961;
             this.btnSubject.Location = new System.Drawing.Point(214, 199);
             this.btnSubject.Name = "btnSubject";
             this.btnSubject.Size = new System.Drawing.Size(205, 190);
@@ -199,7 +199,7 @@
             this.btnPeriods.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPeriods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPeriods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeriods.Image = global::ISS.Properties.Resources.icons8_school_961;
+            this.btnPeriods.Image = global::SchoolManagementSystem.Properties.Resources.icons8_school_961;
             this.btnPeriods.Location = new System.Drawing.Point(425, 199);
             this.btnPeriods.Name = "btnPeriods";
             this.btnPeriods.Size = new System.Drawing.Size(205, 190);
@@ -214,7 +214,7 @@
             this.btnClassTimings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClassTimings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClassTimings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClassTimings.Image = global::ISS.Properties.Resources.icons8_curriculum_96;
+            this.btnClassTimings.Image = global::SchoolManagementSystem.Properties.Resources.icons8_curriculum_96;
             this.btnClassTimings.Location = new System.Drawing.Point(636, 199);
             this.btnClassTimings.Name = "btnClassTimings";
             this.btnClassTimings.Size = new System.Drawing.Size(205, 190);
@@ -230,7 +230,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);

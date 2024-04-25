@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class StaffAttendance : Sample2
     {
@@ -26,12 +26,12 @@ namespace ISS
         {
             if (MainClass.STAFFROLE == "Admin")
             {
-                dbAdmin hom = new ISS.dbAdmin();
+                dbAdmin hom = new SchoolManagementSystem.dbAdmin();
                 MainClass.ShowWindow(hom, this, MDI.ActiveForm);
             }
             else if (MainClass.STAFFROLE == "Principal")
             {
-                dbStaffManagement stm = new ISS.dbStaffManagement();
+                dbStaffManagement stm = new SchoolManagementSystem.dbStaffManagement();
                 MainClass.ShowWindow(stm, this, MDI.ActiveForm);
             }
             else

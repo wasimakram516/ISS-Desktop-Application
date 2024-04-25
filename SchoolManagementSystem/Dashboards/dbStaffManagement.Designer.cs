@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbStaffManagement
     {
@@ -101,7 +101,7 @@
             this.btnStaff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaff.Image = global::ISS.Properties.Resources.icons8_management_96;
+            this.btnStaff.Image = global::SchoolManagementSystem.Properties.Resources.icons8_management_96;
             this.btnStaff.Location = new System.Drawing.Point(3, 3);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(205, 190);
@@ -116,7 +116,7 @@
             this.btnAssignment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAssignment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAssignment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAssignment.Image = global::ISS.Properties.Resources.icons8_curriculum_961;
+            this.btnAssignment.Image = global::SchoolManagementSystem.Properties.Resources.icons8_curriculum_961;
             this.btnAssignment.Location = new System.Drawing.Point(214, 3);
             this.btnAssignment.Name = "btnAssignment";
             this.btnAssignment.Size = new System.Drawing.Size(205, 190);
@@ -131,7 +131,7 @@
             this.btnStaffAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaffAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStaffAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaffAttendance.Image = global::ISS.Properties.Resources.icons8_edit_property_961;
+            this.btnStaffAttendance.Image = global::SchoolManagementSystem.Properties.Resources.icons8_edit_property_961;
             this.btnStaffAttendance.Location = new System.Drawing.Point(425, 3);
             this.btnStaffAttendance.Name = "btnStaffAttendance";
             this.btnStaffAttendance.Size = new System.Drawing.Size(205, 190);
@@ -146,7 +146,7 @@
             this.btnSalaray.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalaray.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalaray.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalaray.Image = global::ISS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnSalaray.Image = global::SchoolManagementSystem.Properties.Resources.icons8_cash_in_hand_96;
             this.btnSalaray.Location = new System.Drawing.Point(636, 3);
             this.btnSalaray.Name = "btnSalaray";
             this.btnSalaray.Size = new System.Drawing.Size(205, 190);
@@ -162,7 +162,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);

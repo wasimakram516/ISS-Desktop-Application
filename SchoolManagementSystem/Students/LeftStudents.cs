@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class LeftStudents : Sample2
     {
@@ -25,7 +25,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbStudemtManagement obj = new ISS.dbStudemtManagement();
+            dbStudemtManagement obj = new SchoolManagementSystem.dbStudemtManagement();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 

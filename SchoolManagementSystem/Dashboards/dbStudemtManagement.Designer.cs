@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbStudemtManagement
     {
@@ -103,7 +103,7 @@
             this.btnAdmissions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmissions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdmissions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmissions.Image = global::ISS.Properties.Resources.Add_Students2;
+            this.btnAdmissions.Image = global::SchoolManagementSystem.Properties.Resources.Add_Students2;
             this.btnAdmissions.Location = new System.Drawing.Point(3, 3);
             this.btnAdmissions.Name = "btnAdmissions";
             this.btnAdmissions.Size = new System.Drawing.Size(205, 190);
@@ -118,7 +118,7 @@
             this.btnAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttendance.Image = global::ISS.Properties.Resources.icons8_attendance_96;
+            this.btnAttendance.Image = global::SchoolManagementSystem.Properties.Resources.icons8_attendance_96;
             this.btnAttendance.Location = new System.Drawing.Point(214, 3);
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.Size = new System.Drawing.Size(205, 190);
@@ -133,7 +133,7 @@
             this.btnStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStudents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudents.Image = global::ISS.Properties.Resources.icons8_classroom_96;
+            this.btnStudents.Image = global::SchoolManagementSystem.Properties.Resources.icons8_classroom_96;
             this.btnStudents.Location = new System.Drawing.Point(425, 3);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(205, 190);
@@ -148,7 +148,7 @@
             this.btnPassoutStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPassoutStudents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPassoutStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPassoutStudents.Image = global::ISS.Properties.Resources.icons8_student_male_96;
+            this.btnPassoutStudents.Image = global::SchoolManagementSystem.Properties.Resources.icons8_student_male_96;
             this.btnPassoutStudents.Location = new System.Drawing.Point(636, 3);
             this.btnPassoutStudents.Name = "btnPassoutStudents";
             this.btnPassoutStudents.Size = new System.Drawing.Size(205, 190);
@@ -163,7 +163,7 @@
             this.btnLeftStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLeftStudents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLeftStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeftStudents.Image = global::ISS.Properties.Resources.icons8_leaving_queue_96;
+            this.btnLeftStudents.Image = global::SchoolManagementSystem.Properties.Resources.icons8_leaving_queue_96;
             this.btnLeftStudents.Location = new System.Drawing.Point(3, 199);
             this.btnLeftStudents.Name = "btnLeftStudents";
             this.btnLeftStudents.Size = new System.Drawing.Size(205, 190);
@@ -179,7 +179,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);

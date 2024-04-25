@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbPrincipal
     {
@@ -110,7 +110,7 @@
             this.btnCampusManagement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCampusManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCampusManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCampusManagement.Image = global::ISS.Properties.Resources.icons8_school_building_96;
+            this.btnCampusManagement.Image = global::SchoolManagementSystem.Properties.Resources.icons8_school_building_96;
             this.btnCampusManagement.Location = new System.Drawing.Point(3, 3);
             this.btnCampusManagement.Name = "btnCampusManagement";
             this.btnCampusManagement.Size = new System.Drawing.Size(205, 190);
@@ -125,7 +125,7 @@
             this.btnStaffManagement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaffManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStaffManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaffManagement.Image = global::ISS.Properties.Resources.icons8_management_96;
+            this.btnStaffManagement.Image = global::SchoolManagementSystem.Properties.Resources.icons8_management_96;
             this.btnStaffManagement.Location = new System.Drawing.Point(214, 3);
             this.btnStaffManagement.Name = "btnStaffManagement";
             this.btnStaffManagement.Size = new System.Drawing.Size(205, 190);
@@ -140,7 +140,7 @@
             this.btnStudentManagement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStudentManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStudentManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudentManagement.Image = global::ISS.Properties.Resources.icons8_students_96;
+            this.btnStudentManagement.Image = global::SchoolManagementSystem.Properties.Resources.icons8_students_96;
             this.btnStudentManagement.Location = new System.Drawing.Point(425, 3);
             this.btnStudentManagement.Name = "btnStudentManagement";
             this.btnStudentManagement.Size = new System.Drawing.Size(205, 190);
@@ -155,7 +155,7 @@
             this.btnFeeManagement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFeeManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeeManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeeManagement.Image = global::ISS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnFeeManagement.Image = global::SchoolManagementSystem.Properties.Resources.icons8_cash_in_hand_96;
             this.btnFeeManagement.Location = new System.Drawing.Point(636, 3);
             this.btnFeeManagement.Name = "btnFeeManagement";
             this.btnFeeManagement.Size = new System.Drawing.Size(205, 190);
@@ -170,7 +170,7 @@
             this.btnExams.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExams.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExams.Image = global::ISS.Properties.Resources.icons8_pass_fail_96;
+            this.btnExams.Image = global::SchoolManagementSystem.Properties.Resources.icons8_pass_fail_96;
             this.btnExams.Location = new System.Drawing.Point(3, 199);
             this.btnExams.Name = "btnExams";
             this.btnExams.Size = new System.Drawing.Size(205, 190);
@@ -185,7 +185,7 @@
             this.btnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.Image = global::ISS.Properties.Resources.Messages;
+            this.btnNotifications.Image = global::SchoolManagementSystem.Properties.Resources.Messages;
             this.btnNotifications.Location = new System.Drawing.Point(214, 199);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(205, 190);
@@ -200,7 +200,7 @@
             this.btnExpenses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExpenses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpenses.Image = global::ISS.Properties.Resources.budget_96;
+            this.btnExpenses.Image = global::SchoolManagementSystem.Properties.Resources.budget_96;
             this.btnExpenses.Location = new System.Drawing.Point(425, 199);
             this.btnExpenses.Name = "btnExpenses";
             this.btnExpenses.Size = new System.Drawing.Size(205, 190);
@@ -215,7 +215,7 @@
             this.btnBirthdays.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBirthdays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBirthdays.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBirthdays.Image = global::ISS.Properties.Resources.Birthday_cake;
+            this.btnBirthdays.Image = global::SchoolManagementSystem.Properties.Resources.Birthday_cake;
             this.btnBirthdays.Location = new System.Drawing.Point(636, 199);
             this.btnBirthdays.Name = "btnBirthdays";
             this.btnBirthdays.Size = new System.Drawing.Size(205, 190);
@@ -230,7 +230,7 @@
             this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReports.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Image = global::ISS.Properties.Resources.icons8_edit_property_961;
+            this.btnReports.Image = global::SchoolManagementSystem.Properties.Resources.icons8_edit_property_961;
             this.btnReports.Location = new System.Drawing.Point(3, 395);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(205, 190);

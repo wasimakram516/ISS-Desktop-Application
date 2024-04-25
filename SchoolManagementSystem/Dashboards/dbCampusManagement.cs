@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class dbCampusManagement : Sample
     {
@@ -19,19 +19,19 @@ namespace ISS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            dbPrincipal ad = new ISS.dbPrincipal();
+            dbPrincipal ad = new SchoolManagementSystem.dbPrincipal();
             MainClass.ShowWindow(ad, this, MDI.ActiveForm);
         }
 
         private void btnCampuses_Click(object sender, EventArgs e)
         {
-            Campuses cam = new ISS.Campuses();
+            Campuses cam = new SchoolManagementSystem.Campuses();
             MainClass.ShowWindow(cam, this, MDI.ActiveForm);
         }
 
         private void btnLevels_Click(object sender, EventArgs e)
         {
-            Levels lvl = new ISS.Levels();
+            Levels lvl = new SchoolManagementSystem.Levels();
             MainClass.ShowWindow(lvl, this, MDI.ActiveForm);
         }
 
@@ -68,13 +68,13 @@ namespace ISS
 
         private void btnShifts_Click(object sender, EventArgs e)
         {
-            Shifts shft = new ISS.Shifts();
+            Shifts shft = new SchoolManagementSystem.Shifts();
             MainClass.ShowWindow(shft, this, MDI.ActiveForm);
         }
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
-            Subjects obj = new ISS.Subjects();
+            Subjects obj = new SchoolManagementSystem.Subjects();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
     }

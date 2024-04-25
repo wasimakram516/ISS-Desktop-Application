@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class MDI
     {
@@ -83,7 +83,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "INSTITUTION SUPERVISION SETUP-ISS";
+            this.Text = "TALEEM UL ISLAM HIGH SCHOOL BHALWAL";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MDI_Load);
             this.menuStrip1.ResumeLayout(false);

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class SchoolLeavingCertificateWindow : Sample
     {
@@ -23,7 +23,7 @@ namespace ISS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            dbReports obj = new ISS.dbReports();
+            dbReports obj = new SchoolManagementSystem.dbReports();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 
@@ -37,14 +37,13 @@ namespace ISS
             MainClass.GetDropdownListWithOneParameters("stp_SelectExamTypesWRTSession", ddExamType, "ExamName", "ExamTypeID", "@Session", dtSession.Value.Year);
         }
 
-        private void LoadReport(int Session, Int64 RegNo, Int64 ExamTypeID)
+        private void LoadReport( Int64 RegNo, Int64 ExamTypeID)
         {
             try
             {
                 rd = new ReportDocument();
                 SqlCommand com = new SqlCommand("stp_GetSchoolLeavingCertificate", MainClass.con);
                 com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.AddWithValue("@Session", Session);
                 com.Parameters.AddWithValue("@RegNo", RegNo);
                 com.Parameters.AddWithValue("@ExamTypeID", ExamTypeID);
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -90,7 +89,7 @@ namespace ISS
             }
             else
             {
-                LoadReport(dtSession.Value.Year, Convert.ToInt64(txtRegNo.Text), Convert.ToInt64(ddExamType.SelectedValue));
+                LoadReport( Convert.ToInt64(txtRegNo.Text), Convert.ToInt64(ddExamType.SelectedValue));
             }
         }
 

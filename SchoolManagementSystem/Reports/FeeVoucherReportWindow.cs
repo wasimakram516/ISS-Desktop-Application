@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class FeeVoucherReportWindow : Sample
     {
@@ -25,7 +25,7 @@ namespace ISS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            dbReports obj = new ISS.dbReports();
+            dbReports obj = new SchoolManagementSystem.dbReports();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 

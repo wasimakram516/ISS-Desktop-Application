@@ -1,4 +1,4 @@
-﻿namespace ISS.SMS
+﻿namespace SchoolManagementSystem.SMS
 {
     partial class ManualNotifications
     {
@@ -345,7 +345,7 @@
             this.btnSMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSMS.FlatAppearance.BorderSize = 0;
             this.btnSMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSMS.Image = global::ISS.Properties.Resources.SMS_small;
+            this.btnSMS.Image = global::SchoolManagementSystem.Properties.Resources.SMS_small;
             this.btnSMS.Location = new System.Drawing.Point(148, 554);
             this.btnSMS.Name = "btnSMS";
             this.btnSMS.Size = new System.Drawing.Size(55, 45);
@@ -359,7 +359,7 @@
             this.btnWhatsapp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWhatsapp.FlatAppearance.BorderSize = 0;
             this.btnWhatsapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWhatsapp.Image = global::ISS.Properties.Resources.whatsApp_small;
+            this.btnWhatsapp.Image = global::SchoolManagementSystem.Properties.Resources.whatsApp_small;
             this.btnWhatsapp.Location = new System.Drawing.Point(53, 554);
             this.btnWhatsapp.Name = "btnWhatsapp";
             this.btnWhatsapp.Size = new System.Drawing.Size(55, 45);

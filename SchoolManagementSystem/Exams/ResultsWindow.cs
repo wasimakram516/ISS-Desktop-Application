@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class ResultsWindow : Sample2
     {
@@ -28,7 +28,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbExaminations obj = new ISS.dbExaminations();
+            dbExaminations obj = new SchoolManagementSystem.dbExaminations();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 
@@ -317,7 +317,7 @@ namespace ISS
         
         public override void btnView_Click(object sender, EventArgs e)
         {
-            ResultsView obj = new ISS.ResultsView();
+            ResultsView obj = new SchoolManagementSystem.ResultsView();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
         

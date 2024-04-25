@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS.SMS
+namespace SchoolManagementSystem.SMS
 {
     public partial class ManualNotifications : Sample2
     {
@@ -28,7 +28,7 @@ namespace ISS.SMS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbNotifications obj = new ISS.dbNotifications();
+            dbNotifications obj = new SchoolManagementSystem.dbNotifications();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 

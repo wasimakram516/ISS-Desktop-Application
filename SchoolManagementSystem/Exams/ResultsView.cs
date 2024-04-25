@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class ResultsView : Sample2
     {
@@ -29,7 +29,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            ResultsWindow obj = new ISS.ResultsWindow();
+            ResultsWindow obj = new SchoolManagementSystem.ResultsWindow();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 

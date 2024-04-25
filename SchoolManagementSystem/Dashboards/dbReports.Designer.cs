@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbReports
     {
@@ -125,7 +125,7 @@
             this.btnStudentLists.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStudentLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentLists.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudentLists.Image = global::ISS.Properties.Resources.icons8_student_male_96;
+            this.btnStudentLists.Image = global::SchoolManagementSystem.Properties.Resources.icons8_student_male_96;
             this.btnStudentLists.Location = new System.Drawing.Point(3, 3);
             this.btnStudentLists.Name = "btnStudentLists";
             this.btnStudentLists.Size = new System.Drawing.Size(162, 133);
@@ -141,7 +141,7 @@
             this.btnAdmissionForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdmissionForms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmissionForms.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmissionForms.Image = global::ISS.Properties.Resources.Add_Students21;
+            this.btnAdmissionForms.Image = global::SchoolManagementSystem.Properties.Resources.Add_Students21;
             this.btnAdmissionForms.Location = new System.Drawing.Point(171, 3);
             this.btnAdmissionForms.Name = "btnAdmissionForms";
             this.btnAdmissionForms.Size = new System.Drawing.Size(162, 133);
@@ -157,7 +157,7 @@
             this.btnFeeVouchers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeeVouchers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeeVouchers.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFeeVouchers.Image = global::ISS.Properties.Resources.icons8_transaction_list_96;
+            this.btnFeeVouchers.Image = global::SchoolManagementSystem.Properties.Resources.icons8_transaction_list_96;
             this.btnFeeVouchers.Location = new System.Drawing.Point(3, 142);
             this.btnFeeVouchers.Name = "btnFeeVouchers";
             this.btnFeeVouchers.Size = new System.Drawing.Size(162, 133);
@@ -173,7 +173,7 @@
             this.btnFeePayments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeePayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeePayments.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFeePayments.Image = global::ISS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnFeePayments.Image = global::SchoolManagementSystem.Properties.Resources.icons8_cash_in_hand_96;
             this.btnFeePayments.Location = new System.Drawing.Point(171, 142);
             this.btnFeePayments.Name = "btnFeePayments";
             this.btnFeePayments.Size = new System.Drawing.Size(162, 133);
@@ -189,7 +189,7 @@
             this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAttendance.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendance.Image = global::ISS.Properties.Resources.icons8_edit_property_961;
+            this.btnAttendance.Image = global::SchoolManagementSystem.Properties.Resources.icons8_edit_property_961;
             this.btnAttendance.Location = new System.Drawing.Point(507, 3);
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.Size = new System.Drawing.Size(162, 133);
@@ -205,7 +205,7 @@
             this.btnDailyAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDailyAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDailyAttendance.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDailyAttendance.Image = global::ISS.Properties.Resources.icons8_edit_property_961;
+            this.btnDailyAttendance.Image = global::SchoolManagementSystem.Properties.Resources.icons8_edit_property_961;
             this.btnDailyAttendance.Location = new System.Drawing.Point(339, 3);
             this.btnDailyAttendance.Name = "btnDailyAttendance";
             this.btnDailyAttendance.Size = new System.Drawing.Size(162, 133);
@@ -221,7 +221,7 @@
             this.btnFeeDefaulter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFeeDefaulter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeeDefaulter.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFeeDefaulter.Image = global::ISS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnFeeDefaulter.Image = global::SchoolManagementSystem.Properties.Resources.icons8_cash_in_hand_96;
             this.btnFeeDefaulter.Location = new System.Drawing.Point(339, 142);
             this.btnFeeDefaulter.Name = "btnFeeDefaulter";
             this.btnFeeDefaulter.Size = new System.Drawing.Size(162, 133);
@@ -237,7 +237,7 @@
             this.btnExperienceLetters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExperienceLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExperienceLetters.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExperienceLetters.Image = global::ISS.Properties.Resources.icons8_contract_96;
+            this.btnExperienceLetters.Image = global::SchoolManagementSystem.Properties.Resources.icons8_contract_96;
             this.btnExperienceLetters.Location = new System.Drawing.Point(507, 281);
             this.btnExperienceLetters.Name = "btnExperienceLetters";
             this.btnExperienceLetters.Size = new System.Drawing.Size(162, 133);
@@ -253,7 +253,7 @@
             this.btnSchoolLeavingCertificates.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSchoolLeavingCertificates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchoolLeavingCertificates.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchoolLeavingCertificates.Image = global::ISS.Properties.Resources.icons8_contract_96;
+            this.btnSchoolLeavingCertificates.Image = global::SchoolManagementSystem.Properties.Resources.icons8_contract_96;
             this.btnSchoolLeavingCertificates.Location = new System.Drawing.Point(339, 281);
             this.btnSchoolLeavingCertificates.Name = "btnSchoolLeavingCertificates";
             this.btnSchoolLeavingCertificates.Size = new System.Drawing.Size(162, 133);
@@ -269,7 +269,7 @@
             this.btnResultCards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnResultCards.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResultCards.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResultCards.Image = global::ISS.Properties.Resources.icons8_exam_961;
+            this.btnResultCards.Image = global::SchoolManagementSystem.Properties.Resources.icons8_exam_961;
             this.btnResultCards.Location = new System.Drawing.Point(171, 281);
             this.btnResultCards.Name = "btnResultCards";
             this.btnResultCards.Size = new System.Drawing.Size(162, 133);
@@ -285,7 +285,7 @@
             this.btnDateSheets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDateSheets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDateSheets.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDateSheets.Image = global::ISS.Properties.Resources.icons8_timesheet_96;
+            this.btnDateSheets.Image = global::SchoolManagementSystem.Properties.Resources.icons8_timesheet_96;
             this.btnDateSheets.Location = new System.Drawing.Point(3, 281);
             this.btnDateSheets.Name = "btnDateSheets";
             this.btnDateSheets.Size = new System.Drawing.Size(162, 133);
@@ -301,7 +301,7 @@
             this.btnRevenueLists.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRevenueLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRevenueLists.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevenueLists.Image = global::ISS.Properties.Resources.icons8_cash_in_hand_96;
+            this.btnRevenueLists.Image = global::SchoolManagementSystem.Properties.Resources.icons8_cash_in_hand_96;
             this.btnRevenueLists.Location = new System.Drawing.Point(507, 142);
             this.btnRevenueLists.Name = "btnRevenueLists";
             this.btnRevenueLists.Size = new System.Drawing.Size(162, 133);
@@ -317,7 +317,7 @@
             this.btnTimeTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnTimeTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimeTable.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimeTable.Image = global::ISS.Properties.Resources.icons8_curriculum_961;
+            this.btnTimeTable.Image = global::SchoolManagementSystem.Properties.Resources.icons8_curriculum_961;
             this.btnTimeTable.Location = new System.Drawing.Point(675, 3);
             this.btnTimeTable.Name = "btnTimeTable";
             this.btnTimeTable.Size = new System.Drawing.Size(166, 133);
@@ -333,7 +333,7 @@
             this.btnSalarySlip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalarySlip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalarySlip.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalarySlip.Image = global::ISS.Properties.Resources.icons8_check_96;
+            this.btnSalarySlip.Image = global::SchoolManagementSystem.Properties.Resources.icons8_check_96;
             this.btnSalarySlip.Location = new System.Drawing.Point(675, 281);
             this.btnSalarySlip.Name = "btnSalarySlip";
             this.btnSalarySlip.Size = new System.Drawing.Size(166, 133);
@@ -349,7 +349,7 @@
             this.btnMonthlyStatement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonthlyStatement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMonthlyStatement.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonthlyStatement.Image = global::ISS.Properties.Resources.icons8_general_ledger_96;
+            this.btnMonthlyStatement.Image = global::SchoolManagementSystem.Properties.Resources.icons8_general_ledger_96;
             this.btnMonthlyStatement.Location = new System.Drawing.Point(675, 142);
             this.btnMonthlyStatement.Name = "btnMonthlyStatement";
             this.btnMonthlyStatement.Size = new System.Drawing.Size(166, 133);
@@ -377,7 +377,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);

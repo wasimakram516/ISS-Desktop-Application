@@ -450,11 +450,6 @@ G:\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.cspr
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.pdb
-E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\AxShockwaveFlashObjects.dll
-E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportSource.dll
-E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Shared.dll
-E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Windows.Forms.dll
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\ShockwaveFlashObjects.dll
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
@@ -469,7 +464,6 @@ E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDec
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\stdole.dll
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AbsentNotifications.resources
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ActiveStudentsReportWindow.resources
 E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AdmissionFormWindow.resources
@@ -726,6 +720,287 @@ F:\WASIMZ\SMS\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagement
 F:\WASIMZ\SMS\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
 F:\WASIMZ\SMS\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
 F:\WASIMZ\SMS\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
-G:\WASIMZ\SMS\SMS Projects\ISS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
-G:\WASIMZ\SMS\SMS Projects\ISS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
-G:\WASIMZ\SMS\SMS Projects\ISS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache
+E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CoreCompileInputs.cache
+E:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CopyComplete
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.pdb
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Shared.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\QRCoder.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\ShockwaveFlashObjects.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\stdole.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.IDCards.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AbsentNotifications.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ActiveStudentsReportWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AdmissionFormWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SMS.ManualNotifications.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Admissions.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Assignments.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Attendance.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AttendanceReportWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AttendanceReportWindowOverAll.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Birthdays.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Campuses.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Classes.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ClassTimings.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.DateSheetWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbAdmin.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbPrincipal.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbCampusManagement.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbExaminations.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbExpenditures.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbFaculty.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbFeeManagement.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbNotifications.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbReports.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbStaffManagement.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbStudemtManagement.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamDetails.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamDetailsView.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamTypes.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffLetters.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeConcessions.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeDefaultersListWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeePaymentReportWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeePayments.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeRevenueList.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeStructure.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeVoucher.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeVoucherReportWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Groups.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.LeftStudents.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Levels.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Login.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MDI.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyExpenses.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyExpensesView.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyStatementReportWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.PassOutStudents.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.PaymentMethod.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Periods.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultCards.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultsView.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultsWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SalaryReportWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SchoolLeavingCertificateWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SettingsWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ActiveStudents.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffAttendance.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffSalary.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Subjects.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.TimetableReportWindow.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sample.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Properties.Resources.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sample2.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sections.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Shifts.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Staff.resources
+D:\SoftwareProjects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.GenerateResource.Cache
+D:\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
+D:\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
+D:\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.IDCards.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AbsentNotifications.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ActiveStudentsReportWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AdmissionFormWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SMS.ManualNotifications.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Admissions.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Assignments.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Attendance.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AttendanceReportWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AttendanceReportWindowOverAll.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Birthdays.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Campuses.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Classes.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ClassTimings.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.DateSheetWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbAdmin.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbPrincipal.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbCampusManagement.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbExaminations.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbExpenditures.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbFaculty.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbFeeManagement.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbNotifications.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbReports.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbStaffManagement.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbStudemtManagement.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamDetails.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamDetailsView.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamTypes.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffLetters.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeConcessions.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeDefaultersListWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeePaymentReportWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeePayments.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeRevenueList.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeStructure.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeVoucher.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeVoucherReportWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Groups.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.LeftStudents.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Levels.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Login.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MDI.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyExpenses.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyExpensesView.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyStatementReportWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.PassOutStudents.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.PaymentMethod.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Periods.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultCards.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultsView.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultsWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SalaryReportWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SchoolLeavingCertificateWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SettingsWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ActiveStudents.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffAttendance.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffSalary.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Subjects.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.TimetableReportWindow.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sample.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Properties.Resources.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sample2.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sections.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Shifts.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Staff.resources
+F:\Softwares\Setups\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.GenerateResource.Cache
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.pdb
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Shared.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Windows.Forms.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\QRCoder.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\ShockwaveFlashObjects.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\FlashControlV71.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\stdole.dll
+F:\Softwares\Setups\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.pdb
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Shared.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\QRCoder.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\ShockwaveFlashObjects.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\FlashControlV71.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\stdole.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.IDCards.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AbsentNotifications.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ActiveStudentsReportWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AdmissionFormWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SMS.ManualNotifications.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Admissions.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Assignments.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Attendance.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AttendanceReportWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.AttendanceReportWindowOverAll.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Birthdays.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Campuses.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Classes.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ClassTimings.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.DateSheetWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbAdmin.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbPrincipal.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbCampusManagement.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbExaminations.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbExpenditures.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbFaculty.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbFeeManagement.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbNotifications.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbReports.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbStaffManagement.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dbStudemtManagement.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamDetails.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamDetailsView.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ExamTypes.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffLetters.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeConcessions.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeDefaultersListWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeePaymentReportWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeePayments.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeRevenueList.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeStructure.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeVoucher.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.FeeVoucherReportWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Groups.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.LeftStudents.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Levels.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Login.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MDI.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyExpenses.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyExpensesView.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.MonthlyStatementReportWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.PassOutStudents.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.PaymentMethod.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Periods.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultCards.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultsView.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ResultsWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SalaryReportWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SchoolLeavingCertificateWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SettingsWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.ActiveStudents.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffAttendance.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.StaffSalary.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Subjects.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.TimetableReportWindow.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sample.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Properties.Resources.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sample2.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Sections.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Shifts.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Staff.resources
+D:\Projects\Software Projects\SMS Projects\THS\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.GenerateResource.Cache

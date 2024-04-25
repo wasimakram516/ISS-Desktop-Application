@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbExaminations
     {
@@ -98,7 +98,7 @@
             this.btnExamDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExamDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExamDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExamDetails.Image = global::ISS.Properties.Resources.icons8_edit_property_96;
+            this.btnExamDetails.Image = global::SchoolManagementSystem.Properties.Resources.icons8_edit_property_96;
             this.btnExamDetails.Location = new System.Drawing.Point(214, 3);
             this.btnExamDetails.Name = "btnExamDetails";
             this.btnExamDetails.Size = new System.Drawing.Size(205, 190);
@@ -113,7 +113,7 @@
             this.btnExamType.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExamType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExamType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExamType.Image = global::ISS.Properties.Resources.icons8_e_learning_961;
+            this.btnExamType.Image = global::SchoolManagementSystem.Properties.Resources.icons8_e_learning_961;
             this.btnExamType.Location = new System.Drawing.Point(3, 3);
             this.btnExamType.Name = "btnExamType";
             this.btnExamType.Size = new System.Drawing.Size(205, 190);
@@ -128,7 +128,7 @@
             this.btnResults.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResults.Image = global::ISS.Properties.Resources.icons8_todo_list_96;
+            this.btnResults.Image = global::SchoolManagementSystem.Properties.Resources.icons8_todo_list_96;
             this.btnResults.Location = new System.Drawing.Point(425, 3);
             this.btnResults.Name = "btnResults";
             this.btnResults.Size = new System.Drawing.Size(205, 190);
@@ -144,7 +144,7 @@
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::ISS.Properties.Resources.back_wite;
+            this.btnBack.Image = global::SchoolManagementSystem.Properties.Resources.back_wite;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 50);

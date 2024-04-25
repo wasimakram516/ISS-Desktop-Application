@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class dbExaminations : Sample
     {
@@ -21,12 +21,12 @@ namespace ISS
         {
             if (MainClass.STAFFROLE == "Admin")
             {
-                dbAdmin hom = new ISS.dbAdmin();
+                dbAdmin hom = new SchoolManagementSystem.dbAdmin();
                 MainClass.ShowWindow(hom, this, MDI.ActiveForm);
             }
             else if (MainClass.STAFFROLE == "Principal")
             {
-                dbPrincipal ad = new ISS.dbPrincipal();
+                dbPrincipal ad = new SchoolManagementSystem.dbPrincipal();
                 MainClass.ShowWindow(ad, this, MDI.ActiveForm);
             }
             else
@@ -38,19 +38,19 @@ namespace ISS
         
         private void btnExamDetails_Click(object sender, EventArgs e)
         {
-            ExamDetails OBJ = new ISS.ExamDetails();
+            ExamDetails OBJ = new SchoolManagementSystem.ExamDetails();
             MainClass.ShowWindow(OBJ, this, MDI.ActiveForm);
         }
 
         private void btnExamType_Click(object sender, EventArgs e)
         {
-            ExamTypes OBJ = new ISS.ExamTypes();
+            ExamTypes OBJ = new SchoolManagementSystem.ExamTypes();
             MainClass.ShowWindow(OBJ, this, MDI.ActiveForm);
         }
 
         private void btnResults_Click(object sender, EventArgs e)
         {
-            ResultsWindow OBJ = new ISS.ResultsWindow();
+            ResultsWindow OBJ = new SchoolManagementSystem.ResultsWindow();
             MainClass.ShowWindow(OBJ, this, MDI.ActiveForm);
         }
 

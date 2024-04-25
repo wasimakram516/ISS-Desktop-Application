@@ -1,4 +1,4 @@
-﻿namespace ISS
+﻿namespace SchoolManagementSystem
 {
     partial class dbAdmin
     {
@@ -102,7 +102,7 @@
             this.btnAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttendance.Image = global::ISS.Properties.Resources.icons8_attendance_96;
+            this.btnAttendance.Image = global::SchoolManagementSystem.Properties.Resources.icons8_attendance_96;
             this.btnAttendance.Location = new System.Drawing.Point(3, 3);
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.Size = new System.Drawing.Size(205, 168);
@@ -117,7 +117,7 @@
             this.btnExams.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExams.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExams.Image = global::ISS.Properties.Resources.icons8_pass_fail_96;
+            this.btnExams.Image = global::SchoolManagementSystem.Properties.Resources.icons8_pass_fail_96;
             this.btnExams.Location = new System.Drawing.Point(636, 3);
             this.btnExams.Name = "btnExams";
             this.btnExams.Size = new System.Drawing.Size(205, 168);
@@ -132,7 +132,7 @@
             this.btnBirthdays.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBirthdays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBirthdays.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBirthdays.Image = global::ISS.Properties.Resources.Birthday_cake;
+            this.btnBirthdays.Image = global::SchoolManagementSystem.Properties.Resources.Birthday_cake;
             this.btnBirthdays.Location = new System.Drawing.Point(3, 177);
             this.btnBirthdays.Name = "btnBirthdays";
             this.btnBirthdays.Size = new System.Drawing.Size(205, 168);
@@ -147,7 +147,7 @@
             this.btnStaffAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaffAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStaffAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaffAttendance.Image = global::ISS.Properties.Resources.icons8_edit_property_961;
+            this.btnStaffAttendance.Image = global::SchoolManagementSystem.Properties.Resources.icons8_edit_property_961;
             this.btnStaffAttendance.Location = new System.Drawing.Point(214, 3);
             this.btnStaffAttendance.Name = "btnStaffAttendance";
             this.btnStaffAttendance.Size = new System.Drawing.Size(205, 168);
@@ -162,7 +162,7 @@
             this.btnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.Image = global::ISS.Properties.Resources.Messages;
+            this.btnNotifications.Image = global::SchoolManagementSystem.Properties.Resources.Messages;
             this.btnNotifications.Location = new System.Drawing.Point(425, 3);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(205, 168);

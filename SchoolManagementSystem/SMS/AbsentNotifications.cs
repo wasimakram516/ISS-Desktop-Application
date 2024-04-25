@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class AbsentNotifications : Sample2
     {
@@ -28,7 +28,7 @@ namespace ISS
 
         public override void btnBack_Click(object sender, EventArgs e)
         {
-            dbNotifications obj = new ISS.dbNotifications();
+            dbNotifications obj = new SchoolManagementSystem.dbNotifications();
             MainClass.ShowWindow(obj, this, MDI.ActiveForm);
         }
 

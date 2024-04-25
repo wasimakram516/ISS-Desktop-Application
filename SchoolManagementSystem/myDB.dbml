@@ -1,0 +1,1975 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbSMS" Class="myDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=WASIM-AKRAM;Initial Catalog=dbSMS;Persist Security Info=True;User ID=sa" SettingsObjectName="THS.Properties.Settings" SettingsPropertyName="dbSMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblCampuses" Member="tblCampuses">
+    <Type Name="tblCampuse">
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="tblCampuse_tblLevel" Member="tblLevels" ThisKey="CampusID" OtherKey="fkCampusID" Type="tblLevel" />
+      <Association Name="tblCampuse_tblClass" Member="tblClasses" ThisKey="CampusID" OtherKey="fkCampusID" Type="tblClass" />
+      <Association Name="tblCampuse_tblSection" Member="tblSections" ThisKey="CampusID" OtherKey="fkCampusID" Type="tblSection" />
+      <Association Name="tblCampuse_tblAdmission" Member="tblAdmissions" ThisKey="CampusID" OtherKey="fkCampusID" Type="tblAdmission" />
+      <Association Name="tblCampuse_tblAssignment" Member="tblAssignments" ThisKey="CampusID" OtherKey="fkCampusID" Type="tblAssignment" />
+      <Association Name="tblCampuse_tblShift" Member="tblShifts" ThisKey="CampusID" OtherKey="fkCampusID" Type="tblShift" />
+      <Association Name="tblCampuse_tblStaff" Member="tblStaffs" ThisKey="CampusID" OtherKey="fkCampusID" Type="tblStaff" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPeriods" Member="tblPeriods">
+    <Type Name="tblPeriod">
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblPeriod_tblClassTiming" Member="tblClassTimings" ThisKey="PeriodID" OtherKey="fkPeriodID" Type="tblClassTiming" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblClassTimings" Member="tblClassTimings">
+    <Type Name="tblClassTiming">
+      <Column Name="CTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkPeriodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkLevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="DayName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblClassTiming_tblAssignment" Member="tblAssignments" ThisKey="CTID" OtherKey="fkCTID" Type="tblAssignment" />
+      <Association Name="tblPeriod_tblClassTiming" Member="tblPeriod" ThisKey="fkPeriodID" OtherKey="PeriodID" Type="tblPeriod" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblLevel_tblClassTiming" Member="tblLevel" ThisKey="fkLevelID" OtherKey="levelID" Type="tblLevel" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPaymentMethods" Member="tblPaymentMethods">
+    <Type Name="tblPaymentMethod">
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Bank" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblPaymentMethod_tblFeeVoucher" Member="tblFeeVouchers" ThisKey="BankID" OtherKey="fkBankID" Type="tblFeeVoucher" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLevels" Member="tblLevels">
+    <Type Name="tblLevel">
+      <Column Name="levelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fkCampusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblLevel_tblClassTiming" Member="tblClassTimings" ThisKey="levelID" OtherKey="fkLevelID" Type="tblClassTiming" />
+      <Association Name="tblLevel_tblClass" Member="tblClasses" ThisKey="levelID" OtherKey="fkLevelID" Type="tblClass" />
+      <Association Name="tblLevel_tblSubject" Member="tblSubjects" ThisKey="levelID" OtherKey="fkLevelID" Type="tblSubject" />
+      <Association Name="tblLevel_tblExam" Member="tblExams" ThisKey="levelID" OtherKey="fkLevelID" Type="tblExam" />
+      <Association Name="tblCampuse_tblLevel" Member="tblCampuse" ThisKey="fkCampusID" OtherKey="CampusID" Type="tblCampuse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblClasses" Member="tblClasses">
+    <Type Name="tblClass">
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fkCampusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkLevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="tblClass_tblFeeConcession" Member="tblFeeConcessions" ThisKey="ClassID" OtherKey="fkClassID" Type="tblFeeConcession" />
+      <Association Name="tblClass_tblFeeVoucher" Member="tblFeeVouchers" ThisKey="ClassID" OtherKey="fkClassID" Type="tblFeeVoucher" />
+      <Association Name="tblClass_tblFeeStructure" Member="tblFeeStructures" ThisKey="ClassID" OtherKey="fkClassID" Type="tblFeeStructure" />
+      <Association Name="tblClass_tblAttendance" Member="tblAttendances" ThisKey="ClassID" OtherKey="fkCLassID" Type="tblAttendance" />
+      <Association Name="tblClass_tblSubject" Member="tblSubjects" ThisKey="ClassID" OtherKey="fkClassID" Type="tblSubject" />
+      <Association Name="tblClass_tblResult" Member="tblResults" ThisKey="ClassID" OtherKey="fkCLassID" Type="tblResult" />
+      <Association Name="tblClass_tblAdmission" Member="tblAdmissions" ThisKey="ClassID" OtherKey="fkClassID" Type="tblAdmission" />
+      <Association Name="tblClass_tblAssignment" Member="tblAssignments" ThisKey="ClassID" OtherKey="fkClassID" Type="tblAssignment" />
+      <Association Name="tblClass_tblExam" Member="tblExams" ThisKey="ClassID" OtherKey="fkClassID" Type="tblExam" />
+      <Association Name="tblCampuse_tblClass" Member="tblCampuse" ThisKey="fkCampusID" OtherKey="CampusID" Type="tblCampuse" IsForeignKey="true" />
+      <Association Name="tblLevel_tblClass" Member="tblLevel" ThisKey="fkLevelID" OtherKey="levelID" Type="tblLevel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSections" Member="tblSections">
+    <Type Name="tblSection">
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkCampusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="tblSection_tblFeeConcession" Member="tblFeeConcessions" ThisKey="SectionID" OtherKey="fkSectionID" Type="tblFeeConcession" />
+      <Association Name="tblSection_tblFeeVoucher" Member="tblFeeVouchers" ThisKey="SectionID" OtherKey="fkSectionID" Type="tblFeeVoucher" />
+      <Association Name="tblSection_tblAttendance" Member="tblAttendances" ThisKey="SectionID" OtherKey="fkSectionID" Type="tblAttendance" />
+      <Association Name="tblSection_tblResult" Member="tblResults" ThisKey="SectionID" OtherKey="fkSectionID" Type="tblResult" />
+      <Association Name="tblSection_tblAdmission" Member="tblAdmissions" ThisKey="SectionID" OtherKey="fkSectionID" Type="tblAdmission" />
+      <Association Name="tblSection_tblAssignment" Member="tblAssignments" ThisKey="SectionID" OtherKey="fkSectionID" Type="tblAssignment" />
+      <Association Name="tblSection_tblExam" Member="tblExams" ThisKey="SectionID" OtherKey="fkSectionID" Type="tblExam" />
+      <Association Name="tblCampuse_tblSection" Member="tblCampuse" ThisKey="fkCampusID" OtherKey="CampusID" Type="tblCampuse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblFeeConcessions" Member="tblFeeConcessions">
+    <Type Name="tblFeeConcession">
+      <Column Name="FeeConcessionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkRegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="tblClass_tblFeeConcession" Member="tblClass" ThisKey="fkClassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblSection_tblFeeConcession" Member="tblSection" ThisKey="fkSectionID" OtherKey="SectionID" Type="tblSection" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblAdmission_tblFeeConcession" Member="tblAdmission" ThisKey="fkRegNo" OtherKey="RegNo" Type="tblAdmission" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblFeeVouchers" Member="tblFeeVouchers">
+    <Type Name="tblFeeVoucher">
+      <Column Name="FeeVoucherID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Month" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkRegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fkBankID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsPaidWithinDueDate" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionFeeStat" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AbcentFeeStat" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityFeeStat" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SportsFeeStat" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="MiscFeeStat" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="tblPaymentMethod_tblFeeVoucher" Member="tblPaymentMethod" ThisKey="fkBankID" OtherKey="BankID" Type="tblPaymentMethod" IsForeignKey="true" />
+      <Association Name="tblClass_tblFeeVoucher" Member="tblClass" ThisKey="fkClassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblSection_tblFeeVoucher" Member="tblSection" ThisKey="fkSectionID" OtherKey="SectionID" Type="tblSection" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblAdmission_tblFeeVoucher" Member="tblAdmission" ThisKey="fkRegNo" OtherKey="RegNo" Type="tblAdmission" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblFeeStructure" Member="tblFeeStructures">
+    <Type Name="tblFeeStructure">
+      <Column Name="FeeStructureID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MonthlyFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SportsFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="LateFine" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AbcentFine" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MiscFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tblClass_tblFeeStructure" Member="tblClass" ThisKey="fkClassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAttendance" Member="tblAttendances">
+    <Type Name="tblAttendance">
+      <Column Name="AttendanceID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fkRegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkCLassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="tblClass_tblAttendance" Member="tblClass" ThisKey="fkCLassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblSection_tblAttendance" Member="tblSection" ThisKey="fkSectionID" OtherKey="SectionID" Type="tblSection" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblAdmission_tblAttendance" Member="tblAdmission" ThisKey="fkRegNo" OtherKey="RegNo" Type="tblAdmission" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSubjects" Member="tblSubjects">
+    <Type Name="tblSubject">
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkLevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblSubject_tblExamDetail" Member="tblExamDetails" ThisKey="SubjectID" OtherKey="fkSubjectID" Type="tblExamDetail" />
+      <Association Name="tblSubject_tblResultDetail" Member="tblResultDetails" ThisKey="SubjectID" OtherKey="fkSubjectID" Type="tblResultDetail" />
+      <Association Name="tblSubject_tblAssignment" Member="tblAssignments" ThisKey="SubjectID" OtherKey="fkSubjectID" Type="tblAssignment" />
+      <Association Name="tblClass_tblSubject" Member="tblClass" ThisKey="fkClassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblLevel_tblSubject" Member="tblLevel" ThisKey="fkLevelID" OtherKey="levelID" Type="tblLevel" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblExamDetails" Member="tblExamDetails">
+    <Type Name="tblExamDetail">
+      <Column Name="ExamDetailID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkExamID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkSubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExamDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TotalMarks" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PassingPercent" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tblSubject_tblExamDetail" Member="tblSubject" ThisKey="fkSubjectID" OtherKey="SubjectID" Type="tblSubject" IsForeignKey="true" />
+      <Association Name="tblExam_tblExamDetail" Member="tblExam" ThisKey="fkExamID" OtherKey="ExamID" Type="tblExam" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblResultDetails" Member="tblResultDetails">
+    <Type Name="tblResultDetail">
+      <Column Name="ResultDetailID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkResultID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkRegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkSubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ObtainedMarks" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Percentage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tblSubject_tblResultDetail" Member="tblSubject" ThisKey="fkSubjectID" OtherKey="SubjectID" Type="tblSubject" IsForeignKey="true" />
+      <Association Name="tblResult_tblResultDetail" Member="tblResult" ThisKey="fkResultID" OtherKey="ResultID" Type="tblResult" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblAdmission_tblResultDetail" Member="tblAdmission" ThisKey="fkRegNo" OtherKey="RegNo" Type="tblAdmission" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblResults" Member="tblResults">
+    <Type Name="tblResult">
+      <Column Name="ResultID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkCLassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="GrandObtained" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GrandPercentage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GrandGrade" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="GrandRemarks" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="tblResult_tblResultDetail" Member="tblResultDetails" ThisKey="ResultID" OtherKey="fkResultID" Type="tblResultDetail" />
+      <Association Name="tblClass_tblResult" Member="tblClass" ThisKey="fkCLassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblSection_tblResult" Member="tblSection" ThisKey="fkSectionID" OtherKey="SectionID" Type="tblSection" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblExamType_tblResult" Member="tblExamType" ThisKey="fkExamTypeID" OtherKey="ExamTypeID" Type="tblExamType" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLeftStudents" Member="tblLeftStudents">
+    <Type Name="tblLeftStudent">
+      <Column Name="LeftStudentID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkRegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LeftDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="tblAdmission_tblLeftStudent" Member="tblAdmission" ThisKey="fkRegNo" OtherKey="RegNo" Type="tblAdmission" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAdmissions" Member="tblAdmissions">
+    <Type Name="tblAdmission">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherProfession" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherProfession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Relegion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="POB" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fkCampusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AdmissionDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="PreSchoolName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Promotion" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="tblAdmission_tblFeeConcession" Member="tblFeeConcessions" ThisKey="RegNo" OtherKey="fkRegNo" Type="tblFeeConcession" />
+      <Association Name="tblAdmission_tblFeeVoucher" Member="tblFeeVouchers" ThisKey="RegNo" OtherKey="fkRegNo" Type="tblFeeVoucher" />
+      <Association Name="tblAdmission_tblAttendance" Member="tblAttendances" ThisKey="RegNo" OtherKey="fkRegNo" Type="tblAttendance" />
+      <Association Name="tblAdmission_tblResultDetail" Member="tblResultDetails" ThisKey="RegNo" OtherKey="fkRegNo" Type="tblResultDetail" />
+      <Association Name="tblAdmission_tblLeftStudent" Member="tblLeftStudents" ThisKey="RegNo" OtherKey="fkRegNo" Type="tblLeftStudent" />
+      <Association Name="tblCampuse_tblAdmission" Member="tblCampuse" ThisKey="fkCampusID" OtherKey="CampusID" Type="tblCampuse" IsForeignKey="true" />
+      <Association Name="tblClass_tblAdmission" Member="tblClass" ThisKey="fkClassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" />
+      <Association Name="tblSection_tblAdmission" Member="tblSection" ThisKey="fkSectionID" OtherKey="SectionID" Type="tblSection" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblExamTypes" Member="tblExamTypes">
+    <Type Name="tblExamType">
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ExamName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ResultDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ResultTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="ResultVenue" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tblExamType_tblResult" Member="tblResults" ThisKey="ExamTypeID" OtherKey="fkExamTypeID" Type="tblResult" />
+      <Association Name="tblExamType_tblExam" Member="tblExams" ThisKey="ExamTypeID" OtherKey="fkExamTypeID" Type="tblExam" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAssignments" Member="tblAssignments">
+    <Type Name="tblAssignment">
+      <Column Name="AssignID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkCampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkShiftID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkCTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkStaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblCampuse_tblAssignment" Member="tblCampuse" ThisKey="fkCampusID" OtherKey="CampusID" Type="tblCampuse" IsForeignKey="true" />
+      <Association Name="tblClass_tblAssignment" Member="tblClass" ThisKey="fkClassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblClassTiming_tblAssignment" Member="tblClassTiming" ThisKey="fkCTID" OtherKey="CTID" Type="tblClassTiming" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblSection_tblAssignment" Member="tblSection" ThisKey="fkSectionID" OtherKey="SectionID" Type="tblSection" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblSubject_tblAssignment" Member="tblSubject" ThisKey="fkSubjectID" OtherKey="SubjectID" Type="tblSubject" IsForeignKey="true" />
+      <Association Name="tblShift_tblAssignment" Member="tblShift" ThisKey="fkShiftID" OtherKey="ShiftID" Type="tblShift" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="tblStaff_tblAssignment" Member="tblStaff" ThisKey="fkStaffID" OtherKey="StaffID" Type="tblStaff" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblShifts" Member="tblShifts">
+    <Type Name="tblShift">
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkCampusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Association Name="tblShift_tblAssignment" Member="tblAssignments" ThisKey="ShiftID" OtherKey="fkShiftID" Type="tblAssignment" />
+      <Association Name="tblCampuse_tblShift" Member="tblCampuse" ThisKey="fkCampusID" OtherKey="CampusID" Type="tblCampuse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblExams" Member="tblExams">
+    <Type Name="tblExam">
+      <Column Name="ExamID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkLevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GrandTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="tblExam_tblExamDetail" Member="tblExamDetails" ThisKey="ExamID" OtherKey="fkExamID" Type="tblExamDetail" />
+      <Association Name="tblClass_tblExam" Member="tblClass" ThisKey="fkClassID" OtherKey="ClassID" Type="tblClass" IsForeignKey="true" />
+      <Association Name="tblExamType_tblExam" Member="tblExamType" ThisKey="fkExamTypeID" OtherKey="ExamTypeID" Type="tblExamType" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblLevel_tblExam" Member="tblLevel" ThisKey="fkLevelID" OtherKey="levelID" Type="tblLevel" IsForeignKey="true" />
+      <Association Name="tblSection_tblExam" Member="tblSection" ThisKey="fkSectionID" OtherKey="SectionID" Type="tblSection" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStaffAttendance" Member="tblStaffAttendances">
+    <Type Name="tblStaffAttendance">
+      <Column Name="StaffAttID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkStaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Association Name="tblStaff_tblStaffAttendance" Member="tblStaff" ThisKey="fkStaffID" OtherKey="StaffID" Type="tblStaff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStaff" Member="tblStaffs">
+    <Type Name="tblStaff">
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkCampusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Scale" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="JoinDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LeftDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Salery" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="tblStaff_tblAssignment" Member="tblAssignments" ThisKey="StaffID" OtherKey="fkStaffID" Type="tblAssignment" />
+      <Association Name="tblStaff_tblStaffAttendance" Member="tblStaffAttendances" ThisKey="StaffID" OtherKey="fkStaffID" Type="tblStaffAttendance" />
+      <Association Name="tblStaff_tblSalary" Member="tblSalaries" ThisKey="StaffID" OtherKey="fkStaffID" Type="tblSalary" />
+      <Association Name="tblCampuse_tblStaff" Member="tblCampuse" ThisKey="fkCampusID" OtherKey="CampusID" Type="tblCampuse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSalary" Member="tblSalaries">
+    <Type Name="tblSalary">
+      <Column Name="SaleryID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Month" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkStaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaidSalery" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="tblStaff_tblSalary" Member="tblStaff" ThisKey="fkStaffID" OtherKey="StaffID" Type="tblStaff" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.stp_DeleteStaff" Method="stp_DeleteStaff">
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteSections" Method="stp_DeleteSections">
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteClasses" Method="stp_DeleteClasses">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteShifts" Method="stp_DeleteShifts">
+    <Parameter Name="ShiftID" Parameter="shiftID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddCampuses" Method="stp_AddCampuses">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteCampuses" Method="stp_DeleteCampuses">
+    <Parameter Name="campID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectCampuses" Method="stp_SelectCampuses">
+    <ElementType Name="stp_SelectCampusesResult">
+      <Column Name="CampID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateCampuses" Method="stp_UpdateCampuses">
+    <Parameter Name="CampID" Parameter="campID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteClassTimings" Method="stp_DeleteClassTimings">
+    <Parameter Name="CTID" Parameter="cTID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteLevels" Method="stp_DeleteLevels">
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddClassTimings" Method="stp_AddClassTimings">
+    <Parameter Name="PeriodID" Parameter="periodID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShiftID" Parameter="shiftID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StartTime" Parameter="startTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="EndTime" Parameter="endTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="Day" Parameter="day" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateClassTimings" Method="stp_UpdateClassTimings">
+    <Parameter Name="CTID" Parameter="cTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PeriodID" Parameter="periodID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShiftID" Parameter="shiftID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StartTime" Parameter="startTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="EndTime" Parameter="endTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="Day" Parameter="day" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddPeriods" Method="stp_AddPeriods">
+    <Parameter Name="Period" Parameter="period" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeletePeriods" Method="stp_DeletePeriods">
+    <Parameter Name="PeriodID" Parameter="periodID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectPeriods" Method="stp_SelectPeriods">
+    <ElementType Name="stp_SelectPeriodsResult">
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdatePeriods" Method="stp_UpdatePeriods">
+    <Parameter Name="PeriodID" Parameter="periodID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Period" Parameter="period" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteAssignments" Method="stp_DeleteAssignments">
+    <Parameter Name="AssignID" Parameter="assignID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectPeriodsWRTClassTimings" Method="stp_SelectPeriodsWRTClassTimings">
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectPeriodsWRTClassTimingsResult">
+      <Column Name="CTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(72)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_DeleteAdmissions" Method="stp_DeleteAdmissions">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteFeeStructure" Method="stp_DeleteFeeStructure">
+    <Parameter Name="FeeStrucID" Parameter="feeStrucID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectFeeStructure" Method="stp_SelectFeeStructure">
+    <ElementType Name="stp_SelectFeeStructureResult">
+      <Column Name="FeeStrucID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MonthlyFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityFee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SportsFee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LateFine" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AbcentFine" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MiscFee" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddPaymentMethods" Method="stp_AddPaymentMethods">
+    <Parameter Name="Bank" Parameter="bank" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="branch" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="account" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeletePaymentMethods" Method="stp_DeletePaymentMethods">
+    <Parameter Name="BankID" Parameter="bankID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectPaymentMethods" Method="stp_SelectPaymentMethods">
+    <ElementType Name="stp_SelectPaymentMethodsResult">
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Bank" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdatePaymentMethods" Method="stp_UpdatePaymentMethods">
+    <Parameter Name="BankID" Parameter="bankID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Bank" Parameter="bank" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="branch" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="account" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectMonthlyFeeWRTClass" Method="stp_SelectMonthlyFeeWRTClass">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectMonthlyFeeWRTClassResult">
+      <Column Name="Monthlyfee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="LateFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddFeeVouchers" Method="stp_AddFeeVouchers">
+    <Parameter Name="Month" Parameter="month" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DueDate" Parameter="dueDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="BankID" Parameter="bankID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="IsPaidWithinDueDate" Parameter="isPaidWithinDueDate" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="AdmissionFeeStat" Parameter="admissionFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="AbcentFeeStat" Parameter="abcentFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="SecurityFeeStat" Parameter="securityFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="SportFeeStat" Parameter="sportFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="MiscFeeStat" Parameter="miscFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddFeeConcessions" Method="stp_AddFeeConcessions">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Disount" Parameter="disount" Type="System.Double" DbType="Float" />
+    <Parameter Name="Reason" Parameter="reason" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteFeeConcessions" Method="stp_DeleteFeeConcessions">
+    <Parameter Name="FeeConcID" Parameter="feeConcID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectFeeConcessions" Method="stp_SelectFeeConcessions">
+    <ElementType Name="stp_SelectFeeConcessionsResult">
+      <Column Name="FeeConcID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectStudentsFromAdmissions" Method="stp_SelectStudentsFromAdmissions">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectStudentsFromAdmissionsResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(82)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateFeeConcessions" Method="stp_UpdateFeeConcessions">
+    <Parameter Name="FeeConcID" Parameter="feeConcID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Disount" Parameter="disount" Type="System.Double" DbType="Float" />
+    <Parameter Name="Reason" Parameter="reason" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddLevels" Method="stp_AddLevels">
+    <Parameter Name="Level" Parameter="level" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateLevels" Method="stp_UpdateLevels">
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Level" Parameter="level" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddClasses" Method="stp_AddClasses">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectClasses" Method="stp_SelectClasses">
+    <ElementType Name="stp_SelectClassesResult">
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateClasses" Method="stp_UpdateClasses">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectLevels" Method="stp_SelectLevels">
+    <ElementType Name="stp_SelectLevelsResult">
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectLevelsWRTCampus" Method="stp_SelectLevelsWRTCampus">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectLevelsWRTCampusResult">
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddSections" Method="stp_AddSections">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateSections" Method="stp_UpdateSections">
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectLevelIDFromClasses" Method="stp_SelectLevelIDFromClasses">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectLevelIDFromClassesResult">
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectClassesWRTCampus" Method="stp_SelectClassesWRTCampus">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectClassesWRTCampusResult">
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectFacultyFromStaff" Method="stp_SelectFacultyFromStaff">
+    <ElementType Name="stp_SelectFacultyFromStaffResult">
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Staff" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectSections" Method="stp_SelectSections">
+    <ElementType Name="stp_SelectSectionsResult">
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UserLogin" Method="stp_UserLogin">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_UserLoginResult">
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectSectionsWRTCampus" Method="stp_SelectSectionsWRTCampus">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectSectionsWRTCampusResult">
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddFeeStructure" Method="stp_AddFeeStructure">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdmissionFee" Parameter="admissionFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="MonthlyFee" Parameter="monthlyFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="SecurityFee" Parameter="securityFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="SportsFee" Parameter="sportsFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="LateFine" Parameter="lateFine" Type="System.Double" DbType="Float" />
+    <Parameter Name="AbcentFine" Parameter="abcentFine" Type="System.Double" DbType="Float" />
+    <Parameter Name="MiscFee" Parameter="miscFee" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateFeeStructure" Method="stp_UpdateFeeStructure">
+    <Parameter Name="FeeStrucID" Parameter="feeStrucID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdmissionFee" Parameter="admissionFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="MonthlyFee" Parameter="monthlyFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="SecurityFee" Parameter="securityFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="SportsFee" Parameter="sportsFee" Type="System.Double" DbType="Float" />
+    <Parameter Name="LateFine" Parameter="lateFine" Type="System.Double" DbType="Float" />
+    <Parameter Name="AbcentFine" Parameter="abcentFine" Type="System.Double" DbType="Float" />
+    <Parameter Name="MiscFee" Parameter="miscFee" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateFeeVouchers" Method="stp_UpdateFeeVouchers">
+    <Parameter Name="FeeVoucherID" Parameter="feeVoucherID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="month" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DueDate" Parameter="dueDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="BankID" Parameter="bankID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdmFeeStat" Parameter="admFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="AbcentFeeStat" Parameter="abcentFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="SecurityFeeStat" Parameter="securityFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="SportFeeStat" Parameter="sportFeeStat" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="ExamFee" Parameter="examFee" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateFeeVouchersWRTStudent" Method="stp_UpdateFeeVouchersWRTStudent">
+    <Parameter Name="FeeVoucherID" Parameter="feeVoucherID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PaidStatus" Parameter="paidStatus" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="WithinDueDate" Parameter="withinDueDate" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddAttendance" Method="stp_AddAttendance">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectAttendanceExistWRTDate" Method="stp_SelectAttendanceExistWRTDate">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CLassID" Parameter="cLassID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectAttendanceExistWRTDateResult">
+      <Column Name="AttendanceID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fkRegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkCLassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkSectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_selectAttendanceWRTDate" Method="stp_selectAttendanceWRTDate">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CLassID" Parameter="cLassID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_selectAttendanceWRTDateResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AttendanceID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectStudentWRTClassAndSection" Method="stp_SelectStudentWRTClassAndSection">
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectStudentWRTClassAndSectionResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateAttendance" Method="stp_UpdateAttendance">
+    <Parameter Name="AttendanceID" Parameter="attendanceID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddSubjects" Method="stp_AddSubjects">
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Subject" Parameter="subject" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteSubjects" Method="stp_DeleteSubjects">
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectSubjects" Method="stp_SelectSubjects">
+    <ElementType Name="stp_SelectSubjectsResult">
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateSubjects" Method="stp_UpdateSubjects">
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Subject" Parameter="subject" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchAttendanceWRTDate" Method="stp_SearchAttendanceWRTDate">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CLassID" Parameter="cLassID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchAttendanceWRTDateResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AttendanceID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchCampuses" Method="stp_SearchCampuses">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchCampusesResult">
+      <Column Name="CampID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchClasses" Method="stp_SearchClasses">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchClassesResult">
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchFeeConcessions" Method="stp_SearchFeeConcessions">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchFeeConcessionsResult">
+      <Column Name="FeeConcID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchFeeStructure" Method="stp_SearchFeeStructure">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchFeeStructureResult">
+      <Column Name="FeeStrucID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MonthlyFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SportsFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="LateFine" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AbcentFine" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MiscFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchLevels" Method="stp_SearchLevels">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchLevelsResult">
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchPaymentMethods" Method="stp_SearchPaymentMethods">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchPaymentMethodsResult">
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Bank" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchPeriods" Method="stp_SearchPeriods">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchPeriodsResult">
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchSections" Method="stp_SearchSections">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchSectionsResult">
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchSubjects" Method="stp_SearchSubjects">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchSubjectsResult">
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateStudentStatus" Method="stp_UpdateStudentStatus">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddExamDetails" Method="stp_AddExamDetails">
+    <Parameter Name="ExamID" Parameter="examID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamDate" Parameter="examDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TotalMarks" Parameter="totalMarks" Type="System.Double" DbType="Float" />
+    <Parameter Name="PassingPercent" Parameter="passingPercent" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteExamTypes" Method="stp_DeleteExamTypes">
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectExamID" Method="stp_SelectExamID">
+    <ElementType Name="stp_SelectExamIDResult">
+      <Column Name="ExamID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectExamTypesWRTSession" Method="stp_SelectExamTypesWRTSession">
+    <Parameter Name="Session" Parameter="session" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="stp_SelectExamTypesWRTSessionResult">
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExamName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateExamDetails" Method="stp_UpdateExamDetails">
+    <Parameter Name="ExamDetailID" Parameter="examDetailID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamDate" Parameter="examDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TotalMarks" Parameter="totalMarks" Type="System.Double" DbType="Float" />
+    <Parameter Name="PassingPercent" Parameter="passingPercent" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteExamDetails" Method="stp_DeleteExamDetails">
+    <Parameter Name="ExamDetailID" Parameter="examDetailID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectStudentsWRT_Level_Session_Class_Section_And_Status" Method="stp_SelectStudentsWRT_Level_Session_Class_Section_And_Status">
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectStudentsWRT_Level_Session_Class_Section_And_StatusResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_CheckColumnExistanceInDatabase" Method="stp_CheckColumnExistanceInDatabase">
+    <Parameter Name="DBColumnName" Parameter="dBColumnName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="DBTableName" Parameter="dBTableName" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="stp_CheckColumnExistanceInDatabaseResult">
+      <Column Name="TABLE_CATALOG" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_SCHEMA" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="TABLE_NAME" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="COLUMN_NAME" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ORDINAL_POSITION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COLUMN_DEFAULT" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="IS_NULLABLE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="DATA_TYPE" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CHARACTER_MAXIMUM_LENGTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CHARACTER_OCTET_LENGTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NUMERIC_PRECISION" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="NUMERIC_PRECISION_RADIX" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="NUMERIC_SCALE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DATETIME_PRECISION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CHARACTER_SET_CATALOG" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CHARACTER_SET_SCHEMA" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CHARACTER_SET_NAME" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="COLLATION_CATALOG" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="COLLATION_SCHEMA" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="COLLATION_NAME" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="DOMAIN_CATALOG" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="DOMAIN_SCHEMA" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="DOMAIN_NAME" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectSubjectsFromExamDetails" Method="stp_SelectSubjectsFromExamDetails">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectSubjectsFromExamDetailsResult">
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateStudent_ObtainedMarks_Percentage_Grade" Method="stp_UpdateStudent_ObtainedMarks_Percentage_Grade">
+    <Parameter Name="ResultID" Parameter="resultID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ObtainedMarks" Parameter="obtainedMarks" Type="System.Double" DbType="Float" />
+    <Parameter Name="Percentage" Parameter="percentage" Type="System.Double" DbType="Float" />
+    <Parameter Name="Grade" Parameter="grade" Type="System.String" DbType="VarChar(2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectSubjectTotalMarksFromExamDetails" Method="stp_SelectSubjectTotalMarksFromExamDetails">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectSubjectTotalMarksFromExamDetailsResult">
+      <Column Name="TotalMarks" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectTotalMarksFromsExamDetails" Method="stp_SelectTotalMarksFromsExamDetails">
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectTotalMarksFromsExamDetailsResult">
+      <Column Name="TotalMarks" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddResultDetails" Method="stp_AddResultDetails">
+    <Parameter Name="ResultID" Parameter="resultID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ObtainedMarks" Parameter="obtainedMarks" Type="System.Double" DbType="Float" />
+    <Parameter Name="Percentage" Parameter="percentage" Type="System.Double" DbType="Float" />
+    <Parameter Name="Grade" Parameter="grade" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="Remarks" Parameter="remarks" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_DeleteResults" Method="stp_DeleteResults">
+    <Parameter Name="ResultID" Parameter="resultID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateResultDetails" Method="stp_UpdateResultDetails">
+    <Parameter Name="ResultDetailID" Parameter="resultDetailID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ObtainedMarks" Parameter="obtainedMarks" Type="System.Double" DbType="Float" />
+    <Parameter Name="Percentage" Parameter="percentage" Type="System.Double" DbType="Float" />
+    <Parameter Name="Grade" Parameter="grade" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="Remarks" Parameter="remarks" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddResults" Method="stp_AddResults">
+    <Parameter Name="CLassID" Parameter="cLassID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="GrandObtained" Parameter="grandObtained" Type="System.Double" DbType="Float" />
+    <Parameter Name="GrandPercentage" Parameter="grandPercentage" Type="System.Double" DbType="Float" />
+    <Parameter Name="GrandGrade" Parameter="grandGrade" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="GrandRemarks" Parameter="grandRemarks" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchResultDetails" Method="stp_SearchResultDetails">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchResultDetailsResult">
+      <Column Name="Sesion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Exam" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ResultID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ResultDetailID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Student" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ObtainedMarks" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Percentage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GrandObtained" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GrandPercentage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GrandGrade" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Grandremarks" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectResultDetailsWRT_Session_ExamType_Class_Section" Method="stp_SelectResultDetailsWRT_Session_ExamType_Class_Section">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectResultDetailsWRT_Session_ExamType_Class_SectionResult">
+      <Column Name="Sesion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Exam" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ResultID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ResultDetailID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Student" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ObtainedMarks" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Percentage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GrandObtained" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GrandPercentage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GrandGrade" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Grandremarks" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateResults" Method="stp_UpdateResults">
+    <Parameter Name="ResultID" Parameter="resultID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="GrandObtained" Parameter="grandObtained" Type="System.Double" DbType="Float" />
+    <Parameter Name="GrandPercentage" Parameter="grandPercentage" Type="System.Double" DbType="Float" />
+    <Parameter Name="GrandGrade" Parameter="grandGrade" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="GrandRemarks" Parameter="grandRemarks" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddLeftStudents" Method="stp_AddLeftStudents">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LeftDate" Parameter="leftDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Reason" Parameter="reason" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateAdmissionsWRT_Session_Level_Class_Section" Method="stp_UpdateAdmissionsWRT_Session_Level_Class_Section">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Session" Parameter="session" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Promotion" Parameter="promotion" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchAdmissions" Method="stp_SearchAdmissions">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchAdmissionsResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherProfession" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherProfession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Relegion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="POB" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="PreSchoolName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectAdmissions" Method="stp_SelectAdmissions">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectAdmissionsResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherProfession" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherProfession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Relegion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="POB" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="PreSchoolName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_GetFeeVouchersWRTClass" Method="stp_GetFeeVouchersWRTClass">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Month" Parameter="month" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="stp_GetFeeVouchersWRTClassResult">
+      <Column Name="FeeVoucherID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MonthlyFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="LateFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Bank" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WithinDueDate" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PaidStatus" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AbcentFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SportFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MiscFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectStudentsWRT_RegNo_Session" Method="stp_SelectStudentsWRT_RegNo_Session">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectStudentsWRT_RegNo_SessionResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddAdmissions" Method="stp_AddAdmissions">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="StuName" Parameter="stuName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="FatherName" Parameter="fatherName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MotherName" Parameter="motherName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FatherProf" Parameter="fatherProf" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MotherProf" Parameter="motherProf" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Relegion" Parameter="relegion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOB" Parameter="dOB" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Nationality" Parameter="nationality" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="POB" Parameter="pOB" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Session" Parameter="session" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="AdmissionDate" Parameter="admissionDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="PreSchoolName" Parameter="preSchoolName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Image" Parameter="image" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateAdmissions" Method="stp_UpdateAdmissions">
+    <Parameter Name="OldRegNo" Parameter="oldRegNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="NewRegNo" Parameter="newRegNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="StuName" Parameter="stuName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="FatherName" Parameter="fatherName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MotherName" Parameter="motherName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FatherProf" Parameter="fatherProf" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MotherProf" Parameter="motherProf" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Relegion" Parameter="relegion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOB" Parameter="dOB" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Nationality" Parameter="nationality" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="POB" Parameter="pOB" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Session" Parameter="session" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="PreSchoolName" Parameter="preSchoolName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Image" Parameter="image" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="AdmissionDate" Parameter="admissionDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateLeftStudents" Method="stp_UpdateLeftStudents">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LeftDate" Parameter="leftDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Reason" Parameter="reason" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_searchLeftStudents" Method="stp_searchLeftStudents">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Level" Parameter="level" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Class" Parameter="class" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Section" Parameter="section" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_searchLeftStudentsResult">
+      <Column Name="LeftID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Student" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="PassoutDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectLeftStudents" Method="stp_SelectLeftStudents">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Level" Parameter="level" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Class" Parameter="class" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Section" Parameter="section" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectLeftStudentsResult">
+      <Column Name="LeftID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Student" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="LeftDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateLeftStudentsStatus" Method="stp_UpdateLeftStudentsStatus">
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddExamTypes" Method="stp_AddExamTypes">
+    <Parameter Name="Session" Parameter="session" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ExamName" Parameter="examName" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="ResultDate" Parameter="resultDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ResultTime" Parameter="resultTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="ResultVenue" Parameter="resultVenue" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchExamDetails" Method="stp_SearchExamDetails">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamTYpeID" Parameter="examTYpeID" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="stp_SearchExamDetailsResult">
+      <Column Name="ExamID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExamDetailID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ExamName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ExamDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TotalMarks" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PassingPercent" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectExamDetails" Method="stp_SelectExamDetails">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="stp_SelectExamDetailsResult">
+      <Column Name="ExamID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExamDetailID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ExamName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ExamDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TotalMarks" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PassingPercent" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateExamTypes" Method="stp_UpdateExamTypes">
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Session" Parameter="session" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ExamName" Parameter="examName" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="ResultDate" Parameter="resultDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ResultTime" Parameter="resultTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="ResultVenue" Parameter="resultVenue" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchClassTimings" Method="stp_SearchClassTimings">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchClassTimingsResult">
+      <Column Name="CTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shift" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Day" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchExamTypes" Method="stp_SearchExamTypes">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchExamTypesResult">
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExamName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ResultDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ResultTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ResultVenue" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectClassTimings" Method="stp_SelectClassTimings">
+    <ElementType Name="stp_SelectClassTimingsResult">
+      <Column Name="CTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shift" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Day" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectExamTypes" Method="stp_SelectExamTypes">
+    <ElementType Name="stp_SelectExamTypesResult">
+      <Column Name="ExamTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExamName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ResultDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ResultTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ResultVenue" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddAssignments" Method="stp_AddAssignments">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShiftID" Parameter="shiftID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CTID" Parameter="cTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SatffID" Parameter="satffID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchAssignments" Method="stp_SearchAssignments">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchAssignmentsResult">
+      <Column Name="AssignID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Day" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Staff" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shift" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectAssignments" Method="stp_SelectAssignments">
+    <ElementType Name="stp_SelectAssignmentsResult">
+      <Column Name="AssignID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Day" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Staff" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shift" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateAssignments" Method="stp_UpdateAssignments">
+    <Parameter Name="AssignID" Parameter="assignID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShiftID" Parameter="shiftID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CTID" Parameter="cTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SubjectID" Parameter="subjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddShifts" Method="stp_AddShifts">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="StartTime" Parameter="startTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="EndTime" Parameter="endTime" Type="System.TimeSpan" DbType="Time" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchShifts" Method="stp_SearchShifts">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchShiftsResult">
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cmpus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectShifts" Method="stp_SelectShifts">
+    <ElementType Name="stp_SelectShiftsResult">
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cmpus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateShifts" Method="stp_UpdateShifts">
+    <Parameter Name="ShiftID" Parameter="shiftID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="StartTime" Parameter="startTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="EndTime" Parameter="endTime" Type="System.TimeSpan" DbType="Time" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_GetFeeVouchersWRT_RegNo" Method="stp_GetFeeVouchersWRT_RegNo">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Month" Parameter="month" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="stp_GetFeeVouchersWRT_RegNoResult">
+      <Column Name="FeeVoucherID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MonthlyFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="LateFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Bank" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WithinDueDate" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PaidStatus" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AbcentFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SportFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MiscFee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddExams" Method="stp_AddExams">
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GrandTotal" Parameter="grandTotal" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateExams" Method="stp_UpdateExams">
+    <Parameter Name="ExamID" Parameter="examID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ExamTypeID" Parameter="examTypeID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GrandTotal" Parameter="grandTotal" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectPassoutStudents" Method="stp_SelectPassoutStudents">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Level" Parameter="level" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Class" Parameter="class" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Section" Parameter="section" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectPassoutStudentsResult">
+      <Column Name="LeftID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Student" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="PassoutDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchPassoutStudents" Method="stp_SearchPassoutStudents">
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Level" Parameter="level" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Class" Parameter="class" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Section" Parameter="section" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchPassoutStudentsResult">
+      <Column Name="LeftID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Student" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="PassoutDate" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SearchActiveStudents" Method="stp_SearchActiveStudents">
+    <Parameter Name="LevelID" Parameter="levelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClassID" Parameter="classID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionID" Parameter="sectionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Session" Parameter="session" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchActiveStudentsResult">
+      <Column Name="RegNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Campus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddStaffAttendance" Method="stp_AddStaffAttendance">
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectExistStaffAttendance" Method="stp_SelectExistStaffAttendance">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="stp_SelectExistStaffAttendanceResult">
+      <Column Name="StaffAttID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fkStaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateStaffAttendance" Method="stp_UpdateStaffAttendance">
+    <Parameter Name="StaffAttID" Parameter="staffAttID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectStaffAttendance" Method="stp_SelectStaffAttendance">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectStaffAttendanceResult">
+      <Column Name="StaffAttendanceID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Staff" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Scale" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectStaffDetailsForAttendance" Method="stp_SelectStaffDetailsForAttendance">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectStaffDetailsForAttendanceResult">
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Scale" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AddStaff" Method="stp_AddStaff">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CNIC" Parameter="cNIC" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Role" Parameter="role" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Scale" Parameter="scale" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="JoinDate" Parameter="joinDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="LeftDate" Parameter="leftDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Salery" Parameter="salery" Type="System.Double" DbType="Float" />
+    <Parameter Name="Image" Parameter="image" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddStaffWithoutImage" Method="stp_AddStaffWithoutImage">
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CNIC" Parameter="cNIC" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Role" Parameter="role" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Scale" Parameter="scale" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="JoinDate" Parameter="joinDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="LeftDate" Parameter="leftDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Salery" Parameter="salery" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SearchStaff" Method="stp_SearchStaff">
+    <Parameter Name="Data" Parameter="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="stp_SearchStaffResult">
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CampusName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Scale" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="JoinDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LeftDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Salery" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_SelectStaffDetails" Method="stp_SelectStaffDetails">
+    <ElementType Name="stp_SelectStaffDetailsResult">
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampusName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CNIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone1" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Scale" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="JoinDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LeftDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Salery" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_UpdateStaff" Method="stp_UpdateStaff">
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CNIC" Parameter="cNIC" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Role" Parameter="role" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Scale" Parameter="scale" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="JoinDate" Parameter="joinDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="LeftDate" Parameter="leftDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Salery" Parameter="salery" Type="System.Double" DbType="Float" />
+    <Parameter Name="Image" Parameter="image" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateStaffWithoutImage" Method="stp_UpdateStaffWithoutImage">
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CampusID" Parameter="campusID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CNIC" Parameter="cNIC" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="Phone1" Parameter="phone1" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Phone2" Parameter="phone2" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Role" Parameter="role" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Scale" Parameter="scale" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="JoinDate" Parameter="joinDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="LeftDate" Parameter="leftDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Salery" Parameter="salery" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_AddSalary" Method="stp_AddSalary">
+    <Parameter Name="Month" Parameter="month" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PaidSalary" Parameter="paidSalary" Type="System.Double" DbType="Float" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_UpdateSalary" Method="stp_UpdateSalary">
+    <Parameter Name="SalaryID" Parameter="salaryID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PaidSalary" Parameter="paidSalary" Type="System.Double" DbType="Float" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Status" Parameter="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_SelectStaffForSalery" Method="stp_SelectStaffForSalery">
+    <Parameter Name="Month" Parameter="month" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int32" DbType="Int" />
+    <ElementType Name="stp_SelectStaffForSaleryResult">
+      <Column Name="SalaryID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Staff" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Salery" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WorkingDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="THL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaidStatus" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

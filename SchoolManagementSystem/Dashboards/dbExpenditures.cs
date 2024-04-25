@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISS
+namespace SchoolManagementSystem
 {
     public partial class dbExpenditures : Sample
     {
@@ -19,13 +19,13 @@ namespace ISS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            dbPrincipal OBJ = new ISS.dbPrincipal();
+            dbPrincipal OBJ = new SchoolManagementSystem.dbPrincipal();
             MainClass.ShowWindow(OBJ, this, MDI.ActiveForm);
         }
 
         private void btnMonthlyExpenses_Click(object sender, EventArgs e)
         {
-            MonthlyExpenses OBJ = new ISS.MonthlyExpenses();
+            MonthlyExpenses OBJ = new SchoolManagementSystem.MonthlyExpenses();
             MainClass.ShowWindow(OBJ, this, MDI.ActiveForm);
         }
     }
