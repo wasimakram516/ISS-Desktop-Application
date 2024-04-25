@@ -6,25 +6,25 @@ The Institute Supervision Setup Software is a comprehensive management system de
 
 ## Features
 
-### Student Management: 
+#### Student Management: 
 Easily manage student records including personal details, academic information, and attendance records.
 
-### Staff Management: 
+#### Staff Management: 
 Efficiently maintain staff information, including personal details, employment history, and attendance tracking.
 
-### Attendance Tracking: 
+#### Attendance Tracking: 
 Track student and staff attendance with ease using intuitive interfaces and automated processes.
 
-### Dynamic Salary Calculations: 
+#### Dynamic Salary Calculations: 
 Automate salary calculations for staff based on attendance, fee collections, exam schedules, and performance results.
 
-### Birthday Wishes: 
+#### Birthday Wishes: 
 Send personalized birthday wishes to students, fostering a positive and engaging atmosphere within the institute.
 
-### Communication: 
+#### Communication: 
 Send SMS and WhatsApp messages to students, staff, and parents for important announcements, reminders, and updates.
 
-### Reports: 
+#### Reports: 
 Generate comprehensive reports on attendance, salary calculations, fee collections, exam results, and more to facilitate informed decision-making and analysis.
 
 
@@ -39,15 +39,15 @@ Intel Core i3 processor, 4GB RAM, 500GB HDD
 
 Before installing the Institute Supervision Setup Software (ISS), ensure that you have the necessary prerequisites installed. These may include:
 
-### Database: 
+### 1. Database: 
 - SQL Server 2014
 - Microsoft SQL Server Management Studio (SSMS)
 
-### SAP Crystal Reports: 
+### 2. SAP Crystal Reports: 
 - SAP Crystal Reports for Visual studio 2015.
 - SAP Crystal Reports runtime.
 
-### .Net Framework
+### 3. .Net Framework
 - .NET Framework (4.5.2)
 
 Download and install these prerequisites from their respective official websites.
