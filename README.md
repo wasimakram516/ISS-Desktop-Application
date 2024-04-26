@@ -63,7 +63,8 @@ Before installing the Institute Supervision Setup Software (ISS), ensure that yo
 ### 3. Initial Setup:
 - After successful installation, launch the Institute Supervision Setup Software.
 #### Provide the following information:
-- Server Name: Enter Your PC name (e.g., My-Computer)
+- Open the settings window form File->Settings, if it is not automatically opened.
+- Server Name: Enter Your PC name here (e.g., My-Computer)
 - Save the settings and restart the application.
 ### 4. Login:
 Upon restarting, the login page will appear.
