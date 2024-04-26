@@ -19,15 +19,10 @@ namespace SchoolManagementSystem
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (MainClass.STAFFROLE == "Admin")
+            if (MainClass.STAFFROLE == "Principal" || MainClass.STAFFROLE == "Admin")
             {
-                dbAdmin hom = new SchoolManagementSystem.dbAdmin();
-                MainClass.ShowWindow(hom, this, MDI.ActiveForm);
-            }
-            else if (MainClass.STAFFROLE == "Principal")
-            {
-                dbPrincipal ad = new SchoolManagementSystem.dbPrincipal();
-                MainClass.ShowWindow(ad, this, MDI.ActiveForm);
+                dbPrincipal pri = new SchoolManagementSystem.dbPrincipal();
+                MainClass.ShowWindow(pri, this, MDI.ActiveForm);
             }
             else
             {

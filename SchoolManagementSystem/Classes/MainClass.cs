@@ -18,9 +18,9 @@ namespace SchoolManagementSystem
         static string conn="";
         public static string ConStr()
         {
-            if (File.Exists(MainClass.path + "\\connect"))
+            if (File.Exists(MainClass.path + "\\ISSConnect"))
             {
-                conn = File.ReadAllText(path + "\\Connect");
+                conn = File.ReadAllText(path + "\\ISSConnect");
             }
             else
             {
@@ -150,12 +150,26 @@ namespace SchoolManagementSystem
         }
 
         bool chkLogin;
-        public bool UserLogin( int CampID,string Username, string Password) // these values are given by user at runtime
+        public bool UserLogin(int CampID, string Username, string Password) // these values are given by user at runtime
         {
             try
             {
-                SqlCommand com = new SqlCommand("stp_UserLogin", MainClass.con);
-                com.CommandType = CommandType.StoredProcedure;
+                // Use a parameterized query to prevent SQL injection
+                string query = @"
+            SELECT 
+                s.StaffID AS 'StaffID',
+                s.Name AS 'Name',
+                s.Username AS 'Username',
+                s.Password AS 'Password',
+                s.Role AS 'Role',
+                c.CampusID AS 'CampusID',
+                c.Name AS 'Campus'
+            FROM tblStaff s 
+            INNER JOIN tblCampuses c ON s.fkCampusID = c.CampusID
+            WHERE s.Username = @Username AND s.Password = @Password AND s.fkCampusID = @CampusID";
+
+                SqlCommand com = new SqlCommand(query, MainClass.con);
+                // Add parameters to the command to prevent SQL injection
                 com.Parameters.AddWithValue("@CampusID", CampID);
                 com.Parameters.AddWithValue("@Username", Username);
                 com.Parameters.AddWithValue("@Password", Password);
@@ -164,10 +178,9 @@ namespace SchoolManagementSystem
 
                 if (dr.HasRows)
                 {
+                    chkLogin = true;
                     while (dr.Read())
                     {
-                        chkLogin = true;
-
                         StaffID = Convert.ToInt32(dr["StaffID"].ToString());
                         StaffName = dr["Name"].ToString();
                         StaffRole = dr["Role"].ToString();
@@ -185,6 +198,7 @@ namespace SchoolManagementSystem
             {
                 MainClass.con.Close();
                 MainClass.ShowMsg(x.Message, "Error", "Error");
+                chkLogin = false; // Ensure chkLogin is set to false in case of an exception
             }
             return chkLogin;
         }

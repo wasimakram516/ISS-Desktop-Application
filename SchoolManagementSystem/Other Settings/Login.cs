@@ -42,12 +42,7 @@ namespace SchoolManagementSystem
             {
                 if (main.UserLogin(Convert.ToInt32(ddCampus.SelectedValue),txtUsername.Text,txtPassword.Text))
                 {
-                    if (MainClass.STAFFROLE=="Admin")
-                    {
-                        dbAdmin hom = new SchoolManagementSystem.dbAdmin();
-                        MainClass.ShowWindow(hom, this, MDI.ActiveForm);
-                    }
-                    else if (MainClass.STAFFROLE == "Principal")
+                    if (MainClass.STAFFROLE == "Principal" || MainClass.STAFFROLE == "Admin")
                     {
                         dbPrincipal pri = new SchoolManagementSystem.dbPrincipal();
                         MainClass.ShowWindow(pri, this, MDI.ActiveForm);

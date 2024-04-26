@@ -50,9 +50,14 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // LeftPanel
+            // 
+            this.LeftPanel.Size = new System.Drawing.Size(260, 772);
+            // 
             // pnlDetails
             // 
             this.pnlDetails.Controls.Add(this.flowLayoutPanel1);
+            this.pnlDetails.Size = new System.Drawing.Size(260, 722);
             // 
             // panel3
             // 
@@ -60,9 +65,14 @@
             this.panel3.Controls.SetChildIndex(this.label4, 0);
             this.panel3.Controls.SetChildIndex(this.btnBack, 0);
             // 
+            // RightPanel
+            // 
+            this.RightPanel.Size = new System.Drawing.Size(844, 772);
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.panel1);
+            this.panel6.Size = new System.Drawing.Size(844, 722);
             // 
             // lblTopUser
             // 
@@ -227,7 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 811);
+            this.ClientSize = new System.Drawing.Size(1104, 772);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Sample2";
             this.LeftPanel.ResumeLayout(false);

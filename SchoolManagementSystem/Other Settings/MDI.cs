@@ -21,7 +21,7 @@ namespace SchoolManagementSystem
 
         private void MDI_Load(object sender, EventArgs e)
         {
-            if (File.Exists(MainClass.path + "\\connect"))
+            if (File.Exists(MainClass.path + "\\ISSConnect"))
             {
                 Login obj = new Login();
                 obj.MdiParent = this;
