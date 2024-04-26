@@ -1,0 +1,183 @@
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\AxShockwaveFlashObjects.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Shared.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Windows.Forms.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\ShockwaveFlashObjects.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\stdole.dll
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AbsentNotifications.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ActiveStudentsReportWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AdmissionFormWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Admissions.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Assignments.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Attendance.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AttendanceReportWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AttendanceReportWindowOverAll.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Birthdays.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Campuses.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Classes.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ClassTimings.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.DateSheetWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbAdmin.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbCampusManagement.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbExaminations.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbExpenditures.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbFaculty.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbFeeManagement.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbNotifications.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbReports.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbStaffManagement.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbStudemtManagement.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExamDetails.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExamDetailsView.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExamTypes.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExperienceLetters.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeConcessions.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeDefaultersListWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeePaymentReportWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeePayments.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeRevenueList.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeStructure.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeVoucher.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeVoucherReportWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.LeftStudents.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Levels.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Login.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MDI.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MonthlyExpenses.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MonthlyExpensesView.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MonthlyStatementReportWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.PassOutStudents.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.PaymentMethod.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Periods.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ResultCards.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Results.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ResultsView.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ResultsWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.SalaryReportWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.SchoolLeavingCertificateWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.SettingsWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ActiveStudents.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.StaffAttendance.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.StaffSalary.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Subjects.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.TimetableReportWindow.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Sample.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Sample2.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Sections.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Shifts.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Staff.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.csproj.GenerateResource.Cache
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\TOPS.exe.config
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\TOPS.exe
+E:\School Management System\TOPS\SchoolManagementSystem\bin\Debug\TOPS.pdb
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Properties.Resources.resources
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.exe
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.pdb
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.csprojResolveAssemblyReference.cache
+E:\School Management System\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Groups.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\TOPS.exe.config
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\TOPS.exe
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\TOPS.pdb
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\AxShockwaveFlashObjects.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Shared.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.Windows.Forms.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\ShockwaveFlashObjects.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\stdole.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AbsentNotifications.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ActiveStudentsReportWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AdmissionFormWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Admissions.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Assignments.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Attendance.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AttendanceReportWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.AttendanceReportWindowOverAll.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Birthdays.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Campuses.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Classes.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ClassTimings.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.DateSheetWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbAdmin.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbCampusManagement.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbExaminations.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbExpenditures.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbFaculty.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbFeeManagement.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbNotifications.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbReports.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbStaffManagement.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.dbStudemtManagement.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExamDetails.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExamDetailsView.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExamTypes.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ExperienceLetters.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeConcessions.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeDefaultersListWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeePaymentReportWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeePayments.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeRevenueList.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeStructure.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeVoucher.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.FeeVoucherReportWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Groups.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.LeftStudents.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Levels.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Login.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MDI.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MonthlyExpenses.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MonthlyExpensesView.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.MonthlyStatementReportWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.PassOutStudents.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.PaymentMethod.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Periods.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ResultCards.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Results.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ResultsView.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ResultsWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.SalaryReportWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.SchoolLeavingCertificateWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.SettingsWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.ActiveStudents.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.StaffAttendance.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.StaffSalary.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Subjects.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.TimetableReportWindow.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Sample.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Properties.Resources.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Sample2.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Sections.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Shifts.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.Staff.resources
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.csproj.GenerateResource.Cache
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.exe
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.pdb
+F:\SMS Projects\TOPS\SchoolManagementSystem\obj\Debug\TOPS.csprojResolveAssemblyReference.cache
+E:\School Management System\TaleemUlIslam\SchoolManagementSystem\bin\Debug\TOPS.exe.config
+E:\School Management System\TaleemUlIslam\SchoolManagementSystem\obj\Debug\TOPS.exe
+E:\School Management System\TaleemUlIslam\SchoolManagementSystem\obj\Debug\TOPS.pdb
